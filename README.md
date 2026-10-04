@@ -14,15 +14,15 @@
   <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest">Latest release</a>
 </p>
 
-## Download Swep 0.2.1 (04-oct-2026)
+## Download Swep 0.2.2 (04-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.1_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.1/Swep_0.2.1_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.1_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.1/Swep_0.2.1_x64.dmg) |
-| Windows | [Swep_0.2.1_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.1/Swep_0.2.1_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.1_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.1/Swep_0.2.1_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.1_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.1/Swep_0.2.1_amd64.deb) |
+| macOS, Apple Silicon | [Swep_0.2.2_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.2_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_x64.dmg) |
+| Windows | [Swep_0.2.2_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.2_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.2_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_amd64.deb) |
 
 The command-line tool `sp` is in the same release for macOS.
 
@@ -49,6 +49,12 @@ The command-line tool `sp` is in the same release for macOS.
 - Fixed: `sp disk --path ~` and piping `sp` into another command no longer crash; problems are written to ~/.swep/crash.log.
 - Selecting rows plays rising notes, a drag-select leaves a trail of stars, and every finished item in a deep clean ticks while a live counter shows what has been cleaned so far.
 - Status has animated gauges and a heartbeat line; new activation codes unscramble into place; page titles cascade in.
+- Clean now removes developer leftovers too: Rust's cargo caches, unpacked sources, git checkouts and rustup downloads (and old toolchains, or all of ~/.cargo and ~/.rustup once Rust is uninstalled); folders and broken commands left by tools you removed; shell startup lines that point at removed tools; Homebrew packages nothing needs and its old versions; and npm, Yarn, pnpm, Bun, pip, uv, Go, CocoaPods, SwiftPM, Gradle and Maven caches. Also on its own page and as `sp dev`.
+- Protected Folders: anything inside them is never cleaned, from any page or command (`sp protect`).
+- Touch ID for sudo can be turned on and off in Settings (`sp touchid`).
+- Status shows the apps using the most memory and live network speed.
+- Remove Swep in Settings takes the app, its settings and the sp command away cleanly.
+- `sp completion zsh|bash|fish` adds tab completion.
 - Monthly (₹20) and yearly (₹220) Pro plans, plus activation codes.
 - Updates come from GitHub first, then the ipconfig.co.network mirror.
 
@@ -64,7 +70,10 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Large Files**, **Installer Files** and **Build Artifacts** (node_modules, Rust target, Python venvs, Pods…).
 - **Purgeable Space** — see how much macOS holds back as purgeable and reclaim it in one click.
 - **Optimize** — DNS, Spotlight, QuickLook, LaunchServices, fonts, Dock and Finder refresh, plus a health and security check.
-- **Package Caches** and **Startup Items** (Pro), **Status** and **History**.
+- **Developer Leftovers** — Rust caches and old toolchains (or all of ~/.cargo and ~/.rustup once Rust is gone), folders and broken commands left by removed tools, shell lines that point at them, Homebrew packages nothing needs, and npm/Yarn/pnpm/Bun/pip/Go/CocoaPods/SwiftPM/Gradle/Maven caches. Part of every Clean.
+- **Protected Folders** — never cleaned, from any page or command.
+- **Touch ID for sudo**, **Remove Swep**, tab completion for `sp`.
+- **Package Caches** and **Startup Items** (Pro), **Status** (gauges, top apps, network) and **History**.
 - Click, Shift-click, drag across rows, or hold Space with the arrow keys to select; Trash or delete for good.
 - Light and dark themes from the icon's palette, a Dock icon that follows them, gentle sounds and animations (both can be turned off).
 - Closing the window quits completely. Updates are signed and checked before they install.
