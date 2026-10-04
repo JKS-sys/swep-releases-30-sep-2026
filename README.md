@@ -9,20 +9,33 @@
 <p align="center">Keep your computer clean — caches, app leftovers, empty folders, large files and more, with nothing removed until you say so.</p>
 
 <p align="center">
-  <a href="https://ipconfig.co.network">Website</a> ·
+  <a href="https://ipconfig.co.network/swep">Website</a> ·
   <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases">All releases</a> ·
   <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest">Latest release</a>
 </p>
 
-## Download Swep 0.2.2 (04-oct-2026)
+## Install
+
+**Homebrew** — one command each, no separate tap step:
+
+```bash
+brew install --cask jks-sys/swep/swep   # the Swep app
+brew install jks-sys/swep/sp            # the sp command
+```
+
+**From the website:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep)
+
+**From GitHub:** the downloads below, or [all releases](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases).
+
+## Download Swep 0.2.3 (04-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.2_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.2_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_x64.dmg) |
-| Windows | [Swep_0.2.2_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.2_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.2_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.2/Swep_0.2.2_amd64.deb) |
+| macOS, Apple Silicon | [Swep_0.2.3_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.3_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_x64.dmg) |
+| Windows | [Swep_0.2.3_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.3_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.3_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_amd64.deb) |
 
 The command-line tool `sp` is in the same release for macOS.
 
@@ -55,6 +68,21 @@ The command-line tool `sp` is in the same release for macOS.
 - Status shows the apps using the most memory and live network speed.
 - Remove Swep in Settings takes the app, its settings and the sp command away cleanly.
 - `sp completion zsh|bash|fish` adds tab completion.
+- Full Disk Access now survives updates: every build is signed with the same certificate.
+- Install with Homebrew in one command: `brew install --cask jks-sys/swep/swep` (and `brew install jks-sys/swep/sp`).
+- Duplicates: finds files that are identical byte for byte (size, samples, then a full SHA-256) and keeps the oldest copy unless you choose otherwise. Also `sp dupes`.
+- Contacts Fixer: removes invalid numbers and repeats, merges duplicate contacts, deletes empty ones and can add country codes — in the Contacts app with iCloud, Google and Exchange accounts (changes sync), or in any .vcf file. Backed up first. Also `sp contacts`.
+- Free Up Memory on the Clean page and in the menu (`sp ram`).
+- Empty Folders, Large Files and Duplicates work everywhere: external disks, network shares, iCloud Drive, OneDrive, Google Drive, Dropbox and Box folders. Online-only cloud files are never counted as taking space.
+- Cloud & Servers: large files and empty folders on Amazon S3, FTP/SFTP, WebDAV, OneDrive, Google Drive and more, through rclone (`sp cloud`).
+- Cleaning also covers Tauri and Rust caches and build folders, temporary files, and the Trash and ._ litter on external disks.
+- Package Caches measures where each tool really keeps its cache, so the sizes are complete.
+- Things that macOS keeps or an app recreates no longer reappear in Empty Folders and command-line leftovers; anything that needs a password gets one retry with it (`sp hidden` lists them).
+- Select All in every list; Analyze no longer takes over another page you switch to while it measures.
+- Works in any window size: the page list scrolls while Swep Pro, Settings and About stay pinned at the bottom; Status and Activation Codes text stays readable and inside its boxes; words like "Temporary files" no longer lose their space.
+- Activation codes can only be made from Swep on the owner's Mac.
+- A subscription paid while Swep was closed is picked up at the next launch.
+- `sp` gained interactive pickers like the bundled engine's: `sp uninstall`, `sp large`, `sp empty`, `sp dupes`, `sp cloud`.
 - Monthly (₹20) and yearly (₹220) Pro plans, plus activation codes.
 - Updates come from GitHub first, then the ipconfig.co.network mirror.
 
@@ -72,6 +100,9 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Optimize** — DNS, Spotlight, QuickLook, LaunchServices, fonts, Dock and Finder refresh, plus a health and security check.
 - **Developer Leftovers** — Rust caches and old toolchains (or all of ~/.cargo and ~/.rustup once Rust is gone), folders and broken commands left by removed tools, shell lines that point at them, Homebrew packages nothing needs, and npm/Yarn/pnpm/Bun/pip/Go/CocoaPods/SwiftPM/Gradle/Maven caches. Part of every Clean.
 - **Protected Folders** — never cleaned, from any page or command.
+- **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file.
+- **Everywhere** — Empty Folders, Large Files and Duplicates on external disks, network shares and cloud folders; **Cloud & Servers** for S3, FTP/SFTP, OneDrive, Google Drive via rclone.
+- **Free Up Memory**, temporary files, Tauri and Rust caches, external-disk litter.
 - **Touch ID for sudo**, **Remove Swep**, tab completion for `sp`.
 - **Package Caches** and **Startup Items** (Pro), **Status** (gauges, top apps, network) and **History**.
 - Click, Shift-click, drag across rows, or hold Space with the arrow keys to select; Trash or delete for good.
@@ -85,4 +116,4 @@ removing many apps at once, the whole disk and external drives, package caches a
 
 ---
 
-Made by Jagadeesh Kumar S — [ipconfig.co.network](https://ipconfig.co.network) · [NewsCraft Studio](https://www.youtube.com/@JKS-sys)
+Made by Jagadeesh Kumar S — [ipconfig.co.network/swep](https://ipconfig.co.network/swep) · [NewsCraft Studio](https://www.youtube.com/@JKS-sys)
