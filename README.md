@@ -16,26 +16,49 @@
 
 ## Install
 
-**Homebrew** — one command each, no separate tap step:
+**Homebrew** — one command, no separate tap step:
 
 ```bash
-brew install --cask jks-sys/swep/swep   # the Swep app
-brew install jks-sys/swep/sp            # the sp command
+brew install --cask jks-sys/swep/swep
 ```
 
 **From the website:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep)
 
 **From GitHub:** the downloads below, or [all releases](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases).
 
-## Download Swep 0.2.3 (04-oct-2026)
+**Linux:** install the `.deb` with your package manager (`sudo apt install ./Swep_*_amd64.deb`), or make the AppImage executable and run it (`chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`).
+**Windows:** run `Swep_*_x64-setup.exe`.
+**The sp command** comes inside the app: Settings → Command line → Install sp (Swep Pro).
+
+## Free and Pro
+
+| | Free | Pro (₹20/month · ₹220/year · or an activation code) |
+|---|:---:|:---:|
+| Clean: caches, logs, developer leftovers, app caches, temporary files | ✓ | ✓ |
+| Clean: untick individual items before cleaning | | ✓ |
+| Leftovers, Installer Files, Build Artifacts, Dev Leftovers | ✓ | ✓ |
+| Empty Folders, Large Files, Duplicates, Analyze — in your home folder | ✓ | ✓ |
+| …on other disks, network shares and cloud folders (iCloud Drive, OneDrive, Google Drive, Dropbox) | | ✓ |
+| Uninstall apps with every leftover — one at a time | ✓ | ✓ |
+| Uninstall many apps at once | | ✓ |
+| Package Caches, Startup Items | | ✓ |
+| Cloud & Servers (S3, FTP/SFTP, OneDrive, Google Drive… via rclone) | | ✓ |
+| AI Models: find them | ✓ | ✓ |
+| AI Models: remove them | | ✓ |
+| Contacts: view every field, export | ✓ | ✓ |
+| Contacts: fix numbers and duplicates, edit, add, delete, import, send between accounts and iCloud accounts | | ✓ |
+| Purgeable Space, Free Up Memory, Status, History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
+| The `sp` command line (previews are free; making changes is Pro) | | ✓ |
+
+## Download Swep 0.2.4 (05-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.3_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.3_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_x64.dmg) |
-| Windows | [Swep_0.2.3_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.3_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.3_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.3/Swep_0.2.3_amd64.deb) |
+| macOS, Apple Silicon | [Swep_0.2.4_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.4_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_x64.dmg) |
+| Windows | [Swep_0.2.4_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.4_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.4_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_amd64.deb) |
 
 The command-line tool `sp` is in the same release for macOS.
 
@@ -82,7 +105,17 @@ The command-line tool `sp` is in the same release for macOS.
 - Works in any window size: the page list scrolls while Swep Pro, Settings and About stay pinned at the bottom; Status and Activation Codes text stays readable and inside its boxes; words like "Temporary files" no longer lose their space.
 - Activation codes can only be made from Swep on the owner's Mac.
 - A subscription paid while Swep was closed is picked up at the next launch.
-- `sp` gained interactive pickers like the bundled engine's: `sp uninstall`, `sp large`, `sp empty`, `sp dupes`, `sp cloud`.
+- `sp` gained interactive pickers: `sp uninstall`, `sp large`, `sp empty`, `sp dupes`, `sp cloud`, `sp ai`.
+- Contacts: every account separately — iCloud, Google, Exchange and On My Mac on this Mac — plus any number of iCloud accounts directly on the internet (so every iPhone syncing with them). See every field including notes; add, edit, delete; export and import .vcf; send or move contacts between accounts; fix problems per account.
+- Invalid numbers are judged by country: a number that cannot exist (like 455457575745745) is caught even when it carries a country code.
+- AI Models: finds Ollama, LM Studio, Hugging Face, PyTorch, Whisper, GPT4All, Jan, Draw Things, DiffusionBee and ComfyUI/Stable Diffusion models, and loose .gguf/.safetensors/.ckpt files, and removes the ones you pick (`sp ai`).
+- Much more to clean: VS Code, Cursor and other editors' caches, Slack, Discord, Teams, Spotify, Notion and Figma caches, Xcode DerivedData and old device support, iPhone update files and backups, Adobe media cache, Mail downloads, old JetBrains and Gradle versions, Docker's unused data.
+- Free Up Memory now measures memory that is truly free, so you can see what it released.
+- The app no longer freezes on a slow or sleeping disk, switching pages quickly stops the scans you left, and nothing runs on the main thread that could hang it.
+- sp: one Esc (or Left arrow) goes back; arrow keys in every terminal style work; nothing crashes or hangs on navigation keys. sp now comes inside the app (Swep Pro) and updates with it.
+- The sidebar scrollbar shows when the pointer is over it.
+- Invalid phone numbers are always judged against your home country (taken from your Mac's region), so a number like 455457575745745 is caught without ticking anything; adding country codes is a separate choice.
+- More life: gold confetti and a fanfare when a clean frees more than 1 GB or Pro turns on, cards that lean toward the pointer with a soft sheen, checkboxes and buttons that click, counters that tick as they count, errors that shake, a logo that breathes and spins when clicked, gentle key clicks while typing in search boxes, and a morning chime for the light theme and a night chime for the dark one.
 - Monthly (₹20) and yearly (₹220) Pro plans, plus activation codes.
 - Updates come from GitHub first, then the ipconfig.co.network mirror.
 
