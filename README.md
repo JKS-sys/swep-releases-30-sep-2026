@@ -115,6 +115,11 @@ The command-line tool `sp` is in the same release for macOS.
 - sp: one Esc (or Left arrow) goes back; arrow keys in every terminal style work; nothing crashes or hangs on navigation keys. sp now comes inside the app (Swep Pro) and updates with it.
 - The sidebar scrollbar shows when the pointer is over it.
 - Invalid phone numbers are always judged against your home country (taken from your Mac's region), so a number like 455457575745745 is caught without ticking anything; adding country codes is a separate choice.
+- Free Up Memory asks for your password once at most: choose Always Allow and Swep may run macOS's own purge tool without asking again.
+- Contacts shows every field — names, nickname, company and department, job title, phones, emails, websites, addresses, birthday and notes — read straight from each account. Each account (iCloud, Google, Exchange, On My Mac, iCloud on the internet) stands on its own; filter, sort, and Copy All to another account without making duplicates.
+- Switching pages quickly no longer piles up scans: one scan of each kind runs at a time, recent results are reused, and answers for a page you already left are dropped.
+- Much more to clean: browser caches, every sandboxed app's cache, old crash reports, Homebrew logs, Poetry, Deno, Electron, Prisma, Turborepo, Terraform, Zig and Unity caches, Playwright/Puppeteer/Cypress browsers, old "Install macOS" apps; and more places where removed apps leave things behind.
+- A gold light sweeps across page titles, numbers glow when they change, toasts bounce in, tabs click and cleaning starts with a broom sweep.
 - More life: gold confetti and a fanfare when a clean frees more than 1 GB or Pro turns on, cards that lean toward the pointer with a soft sheen, checkboxes and buttons that click, counters that tick as they count, errors that shake, a logo that breathes and spins when clicked, gentle key clicks while typing in search boxes, and a morning chime for the light theme and a night chime for the dark one.
 - Monthly (₹20) and yearly (₹220) Pro plans, plus activation codes.
 - Updates come from GitHub first, then the ipconfig.co.network mirror.
