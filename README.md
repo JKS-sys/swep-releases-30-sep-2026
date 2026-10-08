@@ -6,63 +6,98 @@
 
 <h1 align="center">Swep</h1>
 
-<p align="center">Keep your computer clean — caches, app leftovers, empty folders, large files and more, with nothing removed until you say so.</p>
+<p align="center">Keep your computer clean — caches, app leftovers, empty folders, large files, duplicates and an AI clean that explains itself. Nothing is removed until you say so.</p>
+
+<p align="center">
+  <a href="https://ipconfig.co.network/swep"><img alt="Website" src="https://img.shields.io/badge/website-ipconfig.co.network%2Fswep-d19a2f?style=flat-square"></a>
+  <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/JKS-sys/swep-releases-30-sep-2026?style=flat-square&label=latest&color=137a74"></a>
+  <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/JKS-sys/swep-releases-30-sep-2026/total?style=flat-square&color=1f5aa8"></a>
+  <img alt="macOS, Windows, Linux" src="https://img.shields.io/badge/macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-5b45b8?style=flat-square">
+</p>
 
 <p align="center">
   <a href="https://ipconfig.co.network/swep">Website</a> ·
+  <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest">Latest release</a> ·
   <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases">All releases</a> ·
-  <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest">Latest release</a>
+  <a href="https://ipconfig.co.network/updates/swep/RELEASE_NOTES.md">Release notes</a>
 </p>
+
+<p align="center">
+  <a href="https://ipconfig.co.network/swep"><img src="assets/clean.webp" width="820" alt="Swep's Clean page"></a>
+  <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
+</p>
+
+## Download Swep 0.2.5 (08-oct-2026)
+
+| System | Download |
+|---|---|
+| macOS, Apple Silicon | [Swep_0.2.5_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/Swep_0.2.5_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.5_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/Swep_0.2.5_x64.dmg) |
+| Windows | [Swep_0.2.5_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/Swep_0.2.5_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.5_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/Swep_0.2.5_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.5_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/Swep_0.2.5_amd64.deb) |
+| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/swep.rb) |
+| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.5/install.sh) |
+
+The command-line tool `sp` is inside the macOS app (Swep Pro).
 
 ## Install
 
-**Homebrew** — one command, no separate tap step:
+**One line (macOS, Apple Silicon or Intel)** — downloads the newest signed release, checks it, and puts Swep in /Applications:
 
 ```bash
-brew install --cask jks-sys/swep/swep
+curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 ```
 
-**From the website:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep)
+**Homebrew — no tap, no extra repository.** The cask file comes with every release; Homebrew installs it from a local copy:
 
-**From GitHub:** the downloads below, or [all releases](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases).
+```bash
+curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && brew install --cask /tmp/swep.rb
+```
 
-**Linux:** install the `.deb` with your package manager (`sudo apt install ./Swep_*_amd64.deb`), or make the AppImage executable and run it (`chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`).
+(`brew upgrade --cask /tmp/swep.rb` with a fresh copy updates it; Swep also updates itself from Settings.)
+
+**Downloads:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep) or the [latest GitHub release](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest) — `.dmg` for macOS, `_x64-setup.exe` for Windows, `.deb` and `.AppImage` for Linux.
+
+**Linux:** `sudo apt install ./Swep_*_amd64.deb`, or `chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`.
 **Windows:** run `Swep_*_x64-setup.exe`.
 **The sp command** comes inside the app: Settings → Command line → Install sp (Swep Pro).
+
+## What it looks like
+
+<table>
+  <tr>
+    <td width="50%"><a href="assets/clean.webp"><img src="assets/clean.webp" alt="Clean page"></a><br><b>Clean</b> — one scan finds user and system caches, logs, every browser's cache, developer tools, Rust and dependency leftovers, temporary files and the data of apps you removed. Tick what goes; the scan and the clean keep running while you look at other pages.</td>
+    <td width="50%"><a href="assets/history.webp"><img src="assets/history.webp" alt="History page"></a><br><b>History</b> — every clean, when it happened and how much it freed, with the lifetime total. Copy it out as CSV.</td>
+  </tr>
+  <tr>
+    <td><a href="assets/settings.webp"><img src="assets/settings.webp" alt="Settings page"></a><br><b>Settings</b> — light, dark or automatic; a Dock icon that follows; Trash or delete for good; sounds and animations; Full Disk Access; Touch ID for sudo; a clean reminder; crash reports and diagnostics in one place.</td>
+    <td><a href="assets/pro.webp"><img src="assets/pro.webp" alt="Swep Pro page"></a><br><b>Swep Pro</b> — ₹20 a month or ₹220 a year, or an activation code. Everything in Swep, on every disk you own.</td>
+  </tr>
+</table>
 
 ## Free and Pro
 
 | | Free | Pro (₹20/month · ₹220/year · or an activation code) |
 |---|:---:|:---:|
-| Clean: caches, logs, developer leftovers, app caches, temporary files | ✓ | ✓ |
-| Clean: untick individual items before cleaning | | ✓ |
+| Clean: caches, logs, developer leftovers, app caches, games, temporary files | ✓ | ✓ |
+| Clean: untick individual items before cleaning; system caches | | ✓ |
+| AI Clean: Swep's built-in model scores junk, AI-tool caches, leftovers and unwanted downloads, explains each one, and removes what you agree with | ✓ | ✓ |
+| AI Clean: a second opinion from a language model running on your computer (Ollama, LM Studio) | | ✓ |
 | Leftovers, Installer Files, Build Artifacts, Dev Leftovers | ✓ | ✓ |
 | Empty Folders, Large Files, Duplicates, Analyze — in your home folder | ✓ | ✓ |
 | …on other disks, network shares and cloud folders (iCloud Drive, OneDrive, Google Drive, Dropbox) | | ✓ |
-| Uninstall apps with every leftover — one at a time | ✓ | ✓ |
-| Uninstall many apps at once | | ✓ |
+| Uninstall apps with every leftover — one at a time (your password asked once at most) | ✓ | ✓ |
+| Uninstall many apps at once; find apps you have not opened for months | | ✓ |
 | Package Caches, Startup Items | | ✓ |
 | Cloud & Servers (S3, FTP/SFTP, OneDrive, Google Drive… via rclone) | | ✓ |
-| AI Models: find them | ✓ | ✓ |
-| AI Models: remove them | | ✓ |
-| Contacts: view every field, export | ✓ | ✓ |
+| AI Models: find and remove local models (Ollama, LM Studio, Hugging Face, .gguf…) | ✓ | ✓ |
+| Contacts: view every field, export a .vcf that iCloud, Google and phones accept | ✓ | ✓ |
 | Contacts: fix numbers and duplicates, edit, add, delete, import, send between accounts and iCloud accounts | | ✓ |
-| Purgeable Space, Free Up Memory, Status, History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
+| Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## Download Swep 0.2.4 (05-oct-2026)
-
-| System | Download |
-|---|---|
-| macOS, Apple Silicon | [Swep_0.2.4_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.4_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_x64.dmg) |
-| Windows | [Swep_0.2.4_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.4_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.4_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.4/Swep_0.2.4_amd64.deb) |
-
-The command-line tool `sp` is in the same release for macOS.
-
-## What's new
+## What's new in 0.2.5
 
 - Rebuilt on Tauri: the app is a few megabytes instead of a few hundred, starts instantly and uses far less memory.
 - Deep Clean: system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps — with a preview, and Pro can untick anything before cleaning.
@@ -92,7 +127,7 @@ The command-line tool `sp` is in the same release for macOS.
 - Remove Swep in Settings takes the app, its settings and the sp command away cleanly.
 - `sp completion zsh|bash|fish` adds tab completion.
 - Full Disk Access now survives updates: every build is signed with the same certificate.
-- Install with Homebrew in one command: `brew install --cask jks-sys/swep/swep` (and `brew install jks-sys/swep/sp`).
+- Install with Homebrew in one command and no tap: `curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && brew install --cask /tmp/swep.rb` — or without Homebrew, `curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash`.
 - Duplicates: finds files that are identical byte for byte (size, samples, then a full SHA-256) and keeps the oldest copy unless you choose otherwise. Also `sp dupes`.
 - Contacts Fixer: removes invalid numbers and repeats, merges duplicate contacts, deletes empty ones and can add country codes — in the Contacts app with iCloud, Google and Exchange accounts (changes sync), or in any .vcf file. Backed up first. Also `sp contacts`.
 - Free Up Memory on the Clean page and in the menu (`sp ram`).
@@ -123,34 +158,51 @@ The command-line tool `sp` is in the same release for macOS.
 - More life: gold confetti and a fanfare when a clean frees more than 1 GB or Pro turns on, cards that lean toward the pointer with a soft sheen, checkboxes and buttons that click, counters that tick as they count, errors that shake, a logo that breathes and spins when clicked, gentle key clicks while typing in search boxes, and a morning chime for the light theme and a night chime for the dark one.
 - Monthly (₹20) and yearly (₹220) Pro plans, plus activation codes.
 - Updates come from GitHub first, then the ipconfig.co.network mirror.
+- AI Clean, for everyone: a page (and `sp smart`) that scores junk from 0 to 100 and explains every score — caches and downloads of AI tools, tiny junk files, leftovers of removed apps, stale downloads and installers, and files nothing has opened in a very long time. Items at 80 or more are picked for you; nothing is removed until you say so, and "Not junk" keeps a file out for good. Pro can ask a model running on this Mac (Ollama or LM Studio) for a second opinion.
+- Fixed: uninstalling several apps, or anything that needs a password, now asks once. Swep opens a single prompt and the whole run uses that answer; declining it continues with everything that needs no password.
+- Fixed: Contacts export writes vCards that iCloud, Google and Exchange accept — no more "invalid data" on import.
+- Fixed: the progress panel stays in view while Swep works, however far the list is scrolled.
+- Fixed: a clean or scan keeps running while you look at other pages; the Clean item in the sidebar shows its state and the results are still there when you come back. A stopped scan is no longer reused.
+- Overview: a home page with disk rings, the biggest folders, one-click Quick Clean and the latest numbers.
+- Colour everywhere: paths, sizes, numbers, dates, brackets, commands and code are coloured by meaning in every list, log and window (blue, teal, amber, violet, olive, brown, gold and slate — never pink), with the same contrast checked for both themes.
+- Status shows memory pressure, thermal state, Low Power Mode, battery health and cycles, SSD wear and SMART status.
+- More leftovers found: Containers and Group Containers, saved application state, HTTP storage, WebKit data, caches, logs, preferences, cookies, crash reports and folders named after apps that are gone — matched by bundle identifier, vendor and name, and never for anything still installed or running.
+- Much more to clean: every browser profile's caches, app updaters, Xcode archives and simulators, Docker and OrbStack, Android Studio, chat and media caches, game launcher caches, privacy traces, and dozens more package-manager caches — with Windows and Linux equivalents.
+- Uninstall can show only apps you have not opened for months, sorted by last use, and follows the Trash setting (to the Trash, or for good).
+- Diagnostics: crash reports (Swep, sp and macOS crash logs) are collected in Settings, can be copied or cleared, and Swep says so after a crash. Keyboard Shortcuts (⌘/) lists every key.
+- Settings can remind you to clean after a while, and bring back everything you hid.
+- Large Files filters by kind and age; every list has a filter box (⌘F) in its bottom bar.
+- More sounds and motion: a sweeping broom while cleaning, a thinking brain on AI Clean, score rings that fill, battery and gear sounds in Status, a done card that counts what was freed, nav badges that pulse, and the sidebar that waves when a long job finishes.
+- The GitHub README shows the website, the latest release, screenshots with descriptions, the curl installer and the no-tap Homebrew command; every release uploads its release notes, the changelog, the cask file and the installer to R2, and the previous installers are deleted from GitHub once the new release is live.
+- Smaller app: the cleaning runtime ships compressed and unpacks on first use, the bundled `sp` no longer carries a second copy of it, and the icons are a third of their size.
+- Fixed: a scan you cancel is not kept as if it had finished; an uninstall that needs no password never asks for one; binary Info.plist files are read correctly; version-number folders are not mistaken for bundle identifiers.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
 ## Features
 
-- **Clean** — system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps, with a full preview first. Pro can untick anything and include system caches.
-- **Uninstall** — every leftover of an app (caches, preferences, containers, launch agents, logs) listed with its size before anything goes. Pro removes many apps at once.
-- **Leftovers** — data from apps you already deleted, grouped by the app it came from.
+- **Overview** — your disk as a ring (used, purgeable, free), what Swep has freed in total, when it last cleaned, and one-click ways in.
+- **Clean** — system and user caches, logs, every browser's cache (Chrome, Edge, Brave, Arc, Vivaldi, Opera, Firefox, LibreWolf, Zen…), developer tools, chat and media apps, games, and data left by removed apps — with a full preview first. A scan or a clean keeps going while you visit other pages, and is waiting when you come back. Pro can untick anything and include system caches.
+- **AI Clean** — Swep's own model scores AI-tool caches (Ollama, LM Studio, Hugging Face, PyTorch, Claude, ChatGPT, Codex, Cursor…), tiny junk (.DS_Store, __MACOSX, ._ files, broken shortcuts, abandoned downloads, Python caches), leftovers of removed apps and unwanted downloads from 0 to 100, says why in words, ticks what it is sure about, and removes what you agree with. Works offline, for everyone. Pro can ask a local language model for a second opinion.
+- **Uninstall** — every leftover of an app (caches, preferences, containers, launch agents, logs) listed with its size before anything goes; your password is asked once at most, however many apps you remove together. See which apps you have not opened for months. Pro removes many apps at once.
+- **Leftovers** — data from apps you already deleted, matched by bundle identifier (containers and group containers included) and, more carefully, by folder name.
 - **Empty Folders** — folders with nothing real inside, found on every core at once and removed safely (only if still empty).
 - **Analyze** — what takes the space on the startup disk, your home folder or an external drive; folders measured in parallel and remembered.
-- **Large Files**, **Installer Files** and **Build Artifacts** (node_modules, Rust target, Python venvs, Pods…).
+- **Large Files** (by kind and age), **Installer Files** and **Build Artifacts** (node_modules, Rust target, Python venvs, Pods…).
 - **Purgeable Space** — see how much macOS holds back as purgeable and reclaim it in one click.
 - **Optimize** — DNS, Spotlight, QuickLook, LaunchServices, fonts, Dock and Finder refresh, plus a health and security check.
-- **Developer Leftovers** — Rust caches and old toolchains (or all of ~/.cargo and ~/.rustup once Rust is gone), folders and broken commands left by removed tools, shell lines that point at them, Homebrew packages nothing needs, and npm/Yarn/pnpm/Bun/pip/Go/CocoaPods/SwiftPM/Gradle/Maven caches. Part of every Clean.
+- **Developer Leftovers** — Rust caches and old toolchains, folders and broken commands left by removed tools, shell lines that point at them, Homebrew packages nothing needs, Xcode and simulator leftovers, Docker and OrbStack caches, and npm/Yarn/pnpm/Bun/pip/uv/Poetry/Go/CocoaPods/SwiftPM/Gradle/Maven/Conda/NuGet/Bazel caches. Part of every Clean.
+- **Privacy traces** — recent-items lists, the download history record and shell histories, never pre-selected.
 - **Protected Folders** — never cleaned, from any page or command.
-- **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file.
+- **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file; exports a .vcf that iCloud, Google and phones accept.
 - **Everywhere** — Empty Folders, Large Files and Duplicates on external disks, network shares and cloud folders; **Cloud & Servers** for S3, FTP/SFTP, OneDrive, Google Drive via rclone.
+- **Status** — disk, memory, load, network, the apps using the most memory, battery health and cycles, SSD health, memory pressure and thermals.
 - **Free Up Memory**, temporary files, Tauri and Rust caches, external-disk litter.
-- **Touch ID for sudo**, **Remove Swep**, tab completion for `sp`.
-- **Package Caches** and **Startup Items** (Pro), **Status** (gauges, top apps, network) and **History**.
-- Click, Shift-click, drag across rows, or hold Space with the arrow keys to select; Trash or delete for good.
-- Light and dark themes from the icon's palette, a Dock icon that follows them, gentle sounds and animations (both can be turned off).
+- **Touch ID for sudo**, **Remove Swep**, tab completion for `sp`, a clean reminder, crash reports and diagnostics in Settings.
+- **Package Caches** and **Startup Items** (Pro) and **History** (with CSV export).
+- Click, Shift-click, drag across rows, or hold Space with the arrow keys to select; filter any list; Trash or delete for good.
+- Light and dark themes from the icon's palette with a readable rainbow for paths, sizes, numbers and brackets (no pink); a Dock icon that follows; sounds and animations for everything (both can be turned off).
 - Closing the window quits completely. Updates are signed and checked before they install.
-
-## Pro
-
-₹20 a month or ₹220 a year, or an activation code. Pro unlocks choosing exactly what Clean removes, system caches,
-removing many apps at once, the whole disk and external drives, package caches and startup items.
 
 ---
 
