@@ -1,4 +1,4 @@
-# Swep 0.2.6 — 08-oct-2026
+# Swep 0.2.7 — 09-oct-2026
 
 - Rebuilt on Tauri: the app is a few megabytes instead of a few hundred, starts instantly and uses far less memory.
 - Deep Clean: system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps — with a preview, and Pro can untick anything before cleaning.
@@ -93,5 +93,14 @@
 - New: Put Back — everything Swep moved to the Trash, put back where it was.
 - A new start: the mark draws itself, the name rises, "the AI disk cleaner" types itself, and "By Jagadeesh Kumar S" lands with a chime and drifting sparks (any key skips; can be turned off in Settings).
 - Swep is described as the AI disk cleaner on GitHub; each release's notes are published in the public repository and as a release file as well as on R2, and every older file on R2 is deleted once the new release is up (the whole bucket is listed, page by page).
+- Updates in one window: when a new version is ready, the banner (or Swep → Check for Updates) opens a window with what's new, Download and Install, a live progress bar, and Restart Now — no more hunting for it in Settings.
+- Fixed: restarting after an update reliably opens the new copy (it waits for the old one to close, retries if macOS is slow, and notes what happened in ~/.swep/relaunch.log). Updates from this version on use the new restart.
+- Fixed: System Repair (and every other page) no longer checks again when you come back — including when you left while it was still checking. A repair that finishes while you are elsewhere is shown when you return (this also fixes the window error in the crash report).
+- New in System Repair: a corrupted-settings fixer — damaged system settings files, settings that don't stick, network and Wi-Fi settings, Bluetooth, login and background items, the Dock, Finder and Quick Look — each backed up to ~/.swep/backups before it is reset.
+- New in System Repair: a file system check for every disk (First Aid on Mac, chkdsk on Windows, fsck/btrfs scrub on Linux), and repair for disks other than the startup disk.
+- Leftovers: Select All, Select Matched by Identifier, Select None and Show All Groups; more leftovers found in Containers, Group Containers and Caches — short identifiers (like notion.id), iPhone/iPad app containers named by a UUID, apps that are only "running" by coincidence of a word no longer hide leftovers, and leftovers appear a week after the app is gone.
+- Fits any window size: headers, toolbars, buttons, cards, dialogs and pictures wrap or shrink instead of running off the edge (checked on every page at the smallest window size).
+- More colour: every page header carries its own coloured icon, groups get their own colour, selected rows and buttons take the page's colour; new sounds for checks, settings resets and pages coming back as you left them.
+- The GitHub README shows animated demos with descriptions: startup, AI Clean, multitasking, System Repair, AI contact tidying, updating and the Owner Panel.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`

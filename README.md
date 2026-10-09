@@ -27,17 +27,17 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.6 (08-oct-2026)
+## Download Swep 0.2.7 (09-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.6_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/Swep_0.2.6_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.6_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/Swep_0.2.6_x64.dmg) |
-| Windows | [Swep_0.2.6_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/Swep_0.2.6_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.6_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/Swep_0.2.6_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.6_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/Swep_0.2.6_amd64.deb) |
-| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/swep.rb) |
-| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.6/install.sh) |
+| macOS, Apple Silicon | [Swep_0.2.7_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.7_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_x64.dmg) |
+| Windows | [Swep_0.2.7_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.7_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.7_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_amd64.deb) |
+| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/swep.rb) |
+| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/install.sh) |
 
 The command-line tool `sp` is inside the macOS app (Swep Pro).
 
@@ -62,6 +62,26 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 **Linux:** `sudo apt install ./Swep_*_amd64.deb`, or `chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`.
 **Windows:** run `Swep_*_x64-setup.exe`.
 **The sp command** comes inside the app: Settings → Command line → Install sp (Swep Pro).
+
+## See it move
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/intro.gif" alt="Starting up — animated demo"><br><b>Starting up</b> — The mark draws itself, the name rises, “the AI disk cleaner” types itself and the byline lands — with a chime. Any key skips it.</td>
+    <td width="50%" valign="top"><img src="assets/ai-clean.gif" alt="AI Clean — animated demo"><br><b>AI Clean</b> — Swep’s own model scores every candidate from 0 to 100 and says why; the sure ones are ticked, you remove what you agree with, and the result lands with a sweep.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/multitask.gif" alt="Many things at once — animated demo"><br><b>Many things at once</b> — Start a Clean scan, look at Status and Large Files meanwhile, come back: the scan kept going, and every page is exactly as you left it.</td>
+    <td width="50%" valign="top"><img src="assets/repair.gif" alt="System Repair — animated demo"><br><b>System Repair</b> — Checks the disk, the sealed system, settings files, apps and services side by side, then repairs what you tick with the system’s own tools — one password for all of it.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/contacts-ai.gif" alt="Contacts, tidied by AI — animated demo"><br><b>Contacts, tidied by AI</b> — Long, cluttered contact names become clean names; the extra words go into the note, so nothing is lost.</td>
+    <td width="50%" valign="top"><img src="assets/update.gif" alt="Updating — animated demo"><br><b>Updating</b> — Swep says when a new version is ready; one window downloads, checks the signature, installs — then Restart Now.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/owner.gif" alt="Owner Panel — animated demo"><br><b>Owner Panel</b> — In its own window: activation codes, every subscription with its invoices and actions, and the crash reports people send.</td>
+  </tr>
+</table>
 
 ## What it looks like
 
@@ -97,7 +117,7 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.6
+## What's new in 0.2.7
 
 - Rebuilt on Tauri: the app is a few megabytes instead of a few hundred, starts instantly and uses far less memory.
 - Deep Clean: system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps — with a preview, and Pro can untick anything before cleaning.
@@ -192,6 +212,15 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 - New: Put Back — everything Swep moved to the Trash, put back where it was.
 - A new start: the mark draws itself, the name rises, "the AI disk cleaner" types itself, and "By Jagadeesh Kumar S" lands with a chime and drifting sparks (any key skips; can be turned off in Settings).
 - Swep is described as the AI disk cleaner on GitHub; each release's notes are published in the public repository and as a release file as well as on R2, and every older file on R2 is deleted once the new release is up (the whole bucket is listed, page by page).
+- Updates in one window: when a new version is ready, the banner (or Swep → Check for Updates) opens a window with what's new, Download and Install, a live progress bar, and Restart Now — no more hunting for it in Settings.
+- Fixed: restarting after an update reliably opens the new copy (it waits for the old one to close, retries if macOS is slow, and notes what happened in ~/.swep/relaunch.log). Updates from this version on use the new restart.
+- Fixed: System Repair (and every other page) no longer checks again when you come back — including when you left while it was still checking. A repair that finishes while you are elsewhere is shown when you return (this also fixes the window error in the crash report).
+- New in System Repair: a corrupted-settings fixer — damaged system settings files, settings that don't stick, network and Wi-Fi settings, Bluetooth, login and background items, the Dock, Finder and Quick Look — each backed up to ~/.swep/backups before it is reset.
+- New in System Repair: a file system check for every disk (First Aid on Mac, chkdsk on Windows, fsck/btrfs scrub on Linux), and repair for disks other than the startup disk.
+- Leftovers: Select All, Select Matched by Identifier, Select None and Show All Groups; more leftovers found in Containers, Group Containers and Caches — short identifiers (like notion.id), iPhone/iPad app containers named by a UUID, apps that are only "running" by coincidence of a word no longer hide leftovers, and leftovers appear a week after the app is gone.
+- Fits any window size: headers, toolbars, buttons, cards, dialogs and pictures wrap or shrink instead of running off the edge (checked on every page at the smallest window size).
+- More colour: every page header carries its own coloured icon, groups get their own colour, selected rows and buttons take the page's colour; new sounds for checks, settings resets and pages coming back as you left them.
+- The GitHub README shows animated demos with descriptions: startup, AI Clean, multitasking, System Repair, AI contact tidying, updating and the Owner Panel.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
