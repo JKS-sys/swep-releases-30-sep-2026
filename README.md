@@ -27,17 +27,17 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.7 (09-oct-2026)
+## Download Swep 0.2.8 (10-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.7_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.7_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_x64.dmg) |
-| Windows | [Swep_0.2.7_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.7_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.7_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/Swep_0.2.7_amd64.deb) |
-| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/swep.rb) |
-| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.7/install.sh) |
+| macOS, Apple Silicon | [Swep_0.2.8_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.8_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_x64.dmg) |
+| Windows | [Swep_0.2.8_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.8_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.8_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_amd64.deb) |
+| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/swep.rb) |
+| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/install.sh) |
 
 The command-line tool `sp` is inside the macOS app (Swep Pro).
 
@@ -80,6 +80,11 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
   </tr>
   <tr>
     <td width="50%" valign="top"><img src="assets/owner.gif" alt="Owner Panel — animated demo"><br><b>Owner Panel</b> — In its own window: activation codes, every subscription with its invoices and actions, and the crash reports people send.</td>
+    <td width="50%" valign="top"><img src="assets/cloud.gif" alt="Cloud storage — animated demo"><br><b>Cloud storage</b> — Large files of every kind right on S3-compatible storage, OneDrive or Google Drive: filter to documents or installers, see how full each account is, and reconnect the one that signed out.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/apps.gif" alt="Homebrew and Android — animated demo"><br><b>Homebrew and Android</b> — Everything Homebrew installed with sizes and updates; then the bloatware on an Android phone, removed over USB (and restorable).</td>
+    <td width="50%" valign="top"><img src="assets/trash-watch.gif" alt="Apps in the Trash — animated demo"><br><b>Apps in the Trash</b> — Drag an app to the Trash and Swep finds the settings and caches it left, at the top of Leftovers.</td>
   </tr>
 </table>
 
@@ -117,8 +122,22 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.7
+## What's new in 0.2.8
 
+- New: Homebrew — every formula and app Homebrew installed, with sizes, updates and dependencies; uninstall, update, remove old versions and unused dependencies.
+- New: Installer Receipts — receipts of .pkg installers, including the ones whose app is long gone; forget them, or remove a package with its files (never system files).
+- New: Android Phone — remove preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones; anything removed can be restored.
+- New: apps you drag to the Trash are noticed, and what they left behind is offered for removal (at the top of Leftovers, and in a note).
+- New: Uninstall on Windows (each app's own uninstaller, then its AppData/ProgramData folders) and Linux (Flatpak, Snap, apt).
+- Cloud & Servers: large files of every kind — documents, archives, disk images and installers, audio, code and data, not only photos and videos — with kind, size (any size) and age filters, grouped by kind.
+- Cloud & Servers: Recheck All Accounts tests every account at once, shows how full each one is, and Reconnect signs an expired account in again.
+- System Repair: corrupted settings are now replaced with their last good copy (Swep keeps a daily copy of every settings file that reads back clean) through the system's settings service, so they stay fixed instead of coming back broken.
+- Fixed: an app that would not uninstall (GitHub Desktop) — Swep now quits it and its helpers, removes it itself if anything is left, asks for the password only when the app belongs to the administrator, and also finds data folders named after the app.
+- Leftovers: folders in Application Support, Caches and Logs named exactly after a removed app are found too.
+- Dropdowns are drawn by Swep: rounded, with a coloured chevron, hover and focus states in both themes.
+- Razorpay plans updated (monthly and yearly); subscriptions on the earlier yearly plan keep working.
+- `npm run apple-sign`: Developer ID signing with notarization, and a Mac App Store build (sandboxed, App Store updates).
+- `bash update.sh repo-details` sets the description, website and topics of both GitHub repositories and reports what failed.
 - Rebuilt on Tauri: the app is a few megabytes instead of a few hundred, starts instantly and uses far less memory.
 - Deep Clean: system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps — with a preview, and Pro can untick anything before cleaning.
 - Uninstall shows every leftover file with its size before anything is removed, and Pro removes many apps at once.
@@ -245,7 +264,14 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Privacy traces** — recent-items lists, the download history record and shell histories, never pre-selected.
 - **Protected Folders** — never cleaned, from any page or command.
 - **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; contact photos (see, add, change, remove); AI that shortens long names (the extra words go into the note) and long notes (numbers, addresses and dates kept); in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file; exports a .vcf that iCloud, Google and phones accept.
-- **Everywhere** — Empty Folders, Large Files and Duplicates on external disks, network shares and cloud folders; **Cloud & Servers** for S3, FTP/SFTP, OneDrive, Google Drive via rclone.
+- **Everywhere** — Empty Folders, Large Files and Duplicates on external disks, network shares and cloud folders.
+- **Cloud & Servers** — large files of every kind (videos, images, audio, documents, archives, disk images and installers, code and data) and empty folders right on S3 and S3-compatible storage (FileLu, Backblaze, Wasabi, R2…), FTP/SFTP, WebDAV, OneDrive, Google Drive, Dropbox, Box and every other rclone account; filter by kind, size (any size) and age. **Recheck All Accounts** tests every account at once, shows how full each is, and **Reconnect** signs an expired one in again.
+- **Homebrew** — every formula and app Homebrew installed, with sizes, what is out of date and what only came along as a dependency; uninstall (apps with their Library data), update, remove old versions and unused dependencies.
+- **Installer Receipts** — every .pkg installer's receipt: still installed, partly removed, or only a receipt of an app long gone; forget receipts, or remove a package with its files (never system files).
+- **Android Phone** — remove the preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones (safe / with care / needed by the phone); removed apps can be restored any time.
+- **Apps in the Trash** — drag an app to the Trash and Swep notices the settings, caches and containers it left, and removes them in one click.
+- **Uninstall on Windows and Linux** — Windows' installed programs (each app's own uninstaller, then its AppData and ProgramData folders); Flatpak, Snap and apt apps on Linux.
+- **Corrupted settings put right** — Swep keeps a daily copy of every settings file that reads back clean; a damaged one is replaced with its last good copy through the system's settings service (so it sticks), not just deleted.
 - **Status** — disk, memory, load, network, the apps using the most memory, battery health and cycles, SSD health, memory pressure and thermals.
 - **Free Up Memory**, temporary files, Tauri and Rust caches, external-disk litter.
 - **Touch ID for sudo**, **Remove Swep**, tab completion for `sp`, a clean reminder, crash reports and diagnostics in Settings — and one button to send a report to the creator (your name and folders are taken out first).

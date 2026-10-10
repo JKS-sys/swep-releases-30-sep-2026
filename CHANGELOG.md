@@ -2,8 +2,22 @@
 
 ## Unreleased
 
-## Swep 0.2.7 — 09-oct-2026
+## Swep 0.2.8 — 10-oct-2026
 
+- New: Homebrew — every formula and app Homebrew installed, with sizes, updates and dependencies; uninstall, update, remove old versions and unused dependencies.
+- New: Installer Receipts — receipts of .pkg installers, including the ones whose app is long gone; forget them, or remove a package with its files (never system files).
+- New: Android Phone — remove preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones; anything removed can be restored.
+- New: apps you drag to the Trash are noticed, and what they left behind is offered for removal (at the top of Leftovers, and in a note).
+- New: Uninstall on Windows (each app's own uninstaller, then its AppData/ProgramData folders) and Linux (Flatpak, Snap, apt).
+- Cloud & Servers: large files of every kind — documents, archives, disk images and installers, audio, code and data, not only photos and videos — with kind, size (any size) and age filters, grouped by kind.
+- Cloud & Servers: Recheck All Accounts tests every account at once, shows how full each one is, and Reconnect signs an expired account in again.
+- System Repair: corrupted settings are now replaced with their last good copy (Swep keeps a daily copy of every settings file that reads back clean) through the system's settings service, so they stay fixed instead of coming back broken.
+- Fixed: an app that would not uninstall (GitHub Desktop) — Swep now quits it and its helpers, removes it itself if anything is left, asks for the password only when the app belongs to the administrator, and also finds data folders named after the app.
+- Leftovers: folders in Application Support, Caches and Logs named exactly after a removed app are found too.
+- Dropdowns are drawn by Swep: rounded, with a coloured chevron, hover and focus states in both themes.
+- Razorpay plans updated (monthly and yearly); subscriptions on the earlier yearly plan keep working.
+- `npm run apple-sign`: Developer ID signing with notarization, and a Mac App Store build (sandboxed, App Store updates).
+- `bash update.sh repo-details` sets the description, website and topics of both GitHub repositories and reports what failed.
 - Rebuilt on Tauri: the app is a few megabytes instead of a few hundred, starts instantly and uses far less memory.
 - Deep Clean: system and user caches, logs, browser and developer-tool leftovers, and data left by removed apps — with a preview, and Pro can untick anything before cleaning.
 - Uninstall shows every leftover file with its size before anything is removed, and Pro removes many apps at once.
