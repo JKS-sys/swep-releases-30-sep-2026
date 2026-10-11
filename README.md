@@ -27,17 +27,17 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.8 (10-oct-2026)
+## Download Swep 0.2.9 (11-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.8_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.8_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_x64.dmg) |
-| Windows | [Swep_0.2.8_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.8_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.8_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/Swep_0.2.8_amd64.deb) |
-| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/swep.rb) |
-| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.8/install.sh) |
+| macOS, Apple Silicon | [Swep_0.2.9_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.9_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_x64.dmg) |
+| Windows | [Swep_0.2.9_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.9_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.9_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_amd64.deb) |
+| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/swep.rb) |
+| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/install.sh) |
 
 The command-line tool `sp` is inside the macOS app (Swep Pro).
 
@@ -122,8 +122,17 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.8
+## What's new in 0.2.9
 
+- Fixed: after opening Macintosh HD in Analyze, the sidebar stopped working and every page showed "no longer there — removed since the last look". The folder path above the list was catching the sidebar's clicks; it no longer does.
+- Fixed: an action (removing installer receipts, uninstalling, cleaning…) is never undone or lost by changing pages: it finishes, you get a note, and its page shows the new state when you return.
+- Fixed: Homebrew page — works when one package's definition is missing, ignores Homebrew's warnings, finds Homebrew's tools from the Dock, and asks for the password in a normal dialog when an app needs it.
+- New: Local AI — install Ollama, download, choose and remove models, uninstall Ollama; Ask Local AI judges every leftover on this computer.
+- New: Simulators — Xcode simulator devices, runtimes, device support, caches, previews and DerivedData, plus Android emulators.
+- New: Language Files — remove the languages apps carry that you don't use; the app is signed again so it keeps opening.
+- Leftovers: folders kept on purpose are listed with the reason, and can be removed anyway. An app running from anywhere counts as installed by its real identifier; a downloaded copy in Downloads does not; folders of an earlier app with the same developer prefix (network.co.ipconfig.slate, com.hone.app) are no longer mistaken for a current app's.
+- File system checks show their result on the Analyze page (or as a note if you moved on), never in a window that blocks the rest of Swep; Scan Every File System checks all disks in turn.
+- Measuring the whole disk skips online-only cloud folders (OneDrive, Google Drive…) unless you open them, and Swep's small background requests never wait on the window.
 - New: Homebrew — every formula and app Homebrew installed, with sizes, updates and dependencies; uninstall, update, remove old versions and unused dependencies.
 - New: Installer Receipts — receipts of .pkg installers, including the ones whose app is long gone; forget them, or remove a package with its files (never system files).
 - New: Android Phone — remove preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones; anything removed can be restored.
@@ -266,6 +275,10 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; contact photos (see, add, change, remove); AI that shortens long names (the extra words go into the note) and long notes (numbers, addresses and dates kept); in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file; exports a .vcf that iCloud, Google and phones accept.
 - **Everywhere** — Empty Folders, Large Files and Duplicates on external disks, network shares and cloud folders.
 - **Cloud & Servers** — large files of every kind (videos, images, audio, documents, archives, disk images and installers, code and data) and empty folders right on S3 and S3-compatible storage (FileLu, Backblaze, Wasabi, R2…), FTP/SFTP, WebDAV, OneDrive, Google Drive, Dropbox, Box and every other rclone account; filter by kind, size (any size) and age. **Recheck All Accounts** tests every account at once, shows how full each is, and **Reconnect** signs an expired one in again.
+- **Local AI** — install Ollama, download models with a progress bar (suggested ones for every Mac, or any model by name), choose the one Swep asks, remove models, and uninstall Ollama with or without its models. **Ask Local AI** on Leftovers lets that model judge every leftover, on this computer, and ticks what it is sure about.
+- **Simulators** — every simulated iPhone, iPad, Watch and TV with its size, simulator runtimes, old device-support files, caches, SwiftUI previews, DerivedData — and Android Studio's emulators. Unused ones are ticked.
+- **Language Files** — removes the languages apps carry that are not in Language & Region (English and Base stay), then signs the app again so it still opens; App Store apps, Apple's apps and apps using iCloud or the keychain are left alone.
+- **Kept on purpose** — Leftovers also lists folders that look abandoned but were kept, each with the reason (installed where, running, shared by a developer's other apps, Shortcuts data), so you can remove one anyway.
 - **Homebrew** — every formula and app Homebrew installed, with sizes, what is out of date and what only came along as a dependency; uninstall (apps with their Library data), update, remove old versions and unused dependencies.
 - **Installer Receipts** — every .pkg installer's receipt: still installed, partly removed, or only a receipt of an app long gone; forget receipts, or remove a package with its files (never system files).
 - **Android Phone** — remove the preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones (safe / with care / needed by the phone); removed apps can be restored any time.

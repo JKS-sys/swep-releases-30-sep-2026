@@ -2,8 +2,17 @@
 
 ## Unreleased
 
-## Swep 0.2.8 — 10-oct-2026
+## Swep 0.2.9 — 11-oct-2026
 
+- Fixed: after opening Macintosh HD in Analyze, the sidebar stopped working and every page showed "no longer there — removed since the last look". The folder path above the list was catching the sidebar's clicks; it no longer does.
+- Fixed: an action (removing installer receipts, uninstalling, cleaning…) is never undone or lost by changing pages: it finishes, you get a note, and its page shows the new state when you return.
+- Fixed: Homebrew page — works when one package's definition is missing, ignores Homebrew's warnings, finds Homebrew's tools from the Dock, and asks for the password in a normal dialog when an app needs it.
+- New: Local AI — install Ollama, download, choose and remove models, uninstall Ollama; Ask Local AI judges every leftover on this computer.
+- New: Simulators — Xcode simulator devices, runtimes, device support, caches, previews and DerivedData, plus Android emulators.
+- New: Language Files — remove the languages apps carry that you don't use; the app is signed again so it keeps opening.
+- Leftovers: folders kept on purpose are listed with the reason, and can be removed anyway. An app running from anywhere counts as installed by its real identifier; a downloaded copy in Downloads does not; folders of an earlier app with the same developer prefix (network.co.ipconfig.slate, com.hone.app) are no longer mistaken for a current app's.
+- File system checks show their result on the Analyze page (or as a note if you moved on), never in a window that blocks the rest of Swep; Scan Every File System checks all disks in turn.
+- Measuring the whole disk skips online-only cloud folders (OneDrive, Google Drive…) unless you open them, and Swep's small background requests never wait on the window.
 - New: Homebrew — every formula and app Homebrew installed, with sizes, updates and dependencies; uninstall, update, remove old versions and unused dependencies.
 - New: Installer Receipts — receipts of .pkg installers, including the ones whose app is long gone; forget them, or remove a package with its files (never system files).
 - New: Android Phone — remove preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones; anything removed can be restored.
