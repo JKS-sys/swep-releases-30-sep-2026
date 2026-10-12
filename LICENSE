@@ -1,0 +1,61 @@
+Swep - Licence
+
+Copyright (c) 2026 Jagadeesh Kumar S, Chennai, India. All rights reserved.
+
+Swep - the app, the command-line tool sp, the licence and update server, the
+website, the artwork, sounds and documentation - is the copyrighted work of
+Jagadeesh Kumar S ("the creator"). It is not open-source software, and it is
+not under the MIT licence or any other public licence. Using Swep means you
+accept these terms.
+
+What you may do
+  - Install and use Swep on computers you own or control, free of charge, for
+    everything the Free edition offers.
+  - Use the Pro features on as many computers at once as your activation code
+    or subscription allows (two, unless the creator sets another number for
+    your licence), and move a licence between your computers with Swep Pro ->
+    Deactivate.
+  - Keep copies of the installer for your own backups.
+
+What you may not do
+  - Copy, publish, sell, rent, lend or redistribute Swep or any part of it,
+    other than by linking to the official downloads.
+  - Modify, translate, decompile, disassemble or reverse-engineer Swep, or
+    make anything derived from it, except where the law allows this
+    regardless of these terms.
+  - Share, resell, generate or guess activation codes, or get around the
+    licence checks, the Pro features or the limit on computers.
+  - Remove or change the copyright notices, the creator's name or the
+    signatures of the app.
+  - Use the source code, where you have been given access to it (for example
+    a private repository), for anything other than building and running Swep
+    for the creator.
+
+Third-party software
+  Swep bundles and uses components under their own licences, which keep
+  their own terms and are not changed by this licence: the cleaning runtime
+  it ships (GNU GPL version 3 - its licence and notice travel with it and are
+  shown under About -> Licence), the Tauri framework and the Rust and
+  JavaScript libraries it is built from, and the system tools it runs.
+
+Updates and the licence server
+  Swep checks for updates, and checks activation codes and subscriptions
+  with the creator's server. Those checks send only what they need: the code
+  or subscription id, an anonymous machine id, the app version and the
+  operating system. Once a day Swep also counts itself as an installed copy
+  with the same anonymous details; Settings -> "Tell the creator Swep is in
+  use" turns that off. Nothing from your files leaves your computer.
+
+No warranty
+  Swep is provided "as is", without warranty of any kind. It removes only
+  what you confirm, and it keeps what it can in the Trash or Put Back; even
+  so, to the extent the law allows, the creator is not liable for data loss
+  or any other damage arising from its use. Keep a backup.
+
+Ending this licence
+  This licence ends if you break its terms. When it ends, stop using Swep and
+  delete your copies. Clauses that by their nature outlast it (the ownership
+  of the work, the no-warranty clause) remain.
+
+Contact
+  Jagadeesh Kumar S - JKS.sys@icloud.com - https://ipconfig.co.network/swep

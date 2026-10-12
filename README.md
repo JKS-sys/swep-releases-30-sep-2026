@@ -27,17 +27,17 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.9 (11-oct-2026)
+## Download Swep 0.2.10 (12-oct-2026)
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.9_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.9_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_x64.dmg) |
-| Windows | [Swep_0.2.9_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.9_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.9_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/Swep_0.2.9_amd64.deb) |
-| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/swep.rb) |
-| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.9/install.sh) |
+| macOS, Apple Silicon | [Swep_0.2.10_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.10_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_x64.dmg) |
+| Windows | [Swep_0.2.10_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_x64-setup.exe) |
+| Linux (AppImage) | [Swep_0.2.10_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_amd64.AppImage) |
+| Linux (Debian/Ubuntu) | [Swep_0.2.10_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_amd64.deb) |
+| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/swep.rb) |
+| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/install.sh) |
 
 The command-line tool `sp` is inside the macOS app (Swep Pro).
 
@@ -60,31 +60,46 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 **Downloads:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep) or the [latest GitHub release](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest) — `.dmg` for macOS, `_x64-setup.exe` for Windows, `.deb` and `.AppImage` for Linux.
 
 **Linux:** `sudo apt install ./Swep_*_amd64.deb`, or `chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`.
+**ChromeOS:** turn on Linux (Settings → Advanced → Developers), then install the `.deb` the same way — Swep appears in the launcher under Linux apps.
+**FreeBSD:** `pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack `Swep_*_freebsd_amd64.tar.gz` and run `./swep` (built by a FreeBSD VM in CI; updates by hand from the releases page).
 **Windows:** run `Swep_*_x64-setup.exe`.
+**Haiku and other systems:** reach them from Swep as computers over SSH (Devices → Computers): large files, duplicates and empty folders work on anything with an SSH server.
 **The sp command** comes inside the app: Settings → Command line → Install sp (Swep Pro).
 
 ## See it move
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="assets/intro.gif" alt="Starting up — animated demo"><br><b>Starting up</b> — The mark draws itself, the name rises, “the AI disk cleaner” types itself and the byline lands — with a chime. Any key skips it.</td>
-    <td width="50%" valign="top"><img src="assets/ai-clean.gif" alt="AI Clean — animated demo"><br><b>AI Clean</b> — Swep’s own model scores every candidate from 0 to 100 and says why; the sure ones are ticked, you remove what you agree with, and the result lands with a sweep.</td>
+    <td width="50%" valign="top"><img src="assets/intro.webp" alt="Starting up — animated demo" width="100%"><br><b>Starting up</b> — The mark draws itself, the name rises, “the AI disk cleaner” types itself and the byline lands — with a chime. Any key skips it.</td>
+    <td width="50%" valign="top"><img src="assets/ai-clean.webp" alt="AI Clean — animated demo" width="100%"><br><b>AI Clean</b> — Swep’s own model scores every candidate from 0 to 100 and says why; the sure ones are ticked, you remove what you agree with, and the result lands with a sweep.</td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="assets/multitask.gif" alt="Many things at once — animated demo"><br><b>Many things at once</b> — Start a Clean scan, look at Status and Large Files meanwhile, come back: the scan kept going, and every page is exactly as you left it.</td>
-    <td width="50%" valign="top"><img src="assets/repair.gif" alt="System Repair — animated demo"><br><b>System Repair</b> — Checks the disk, the sealed system, settings files, apps and services side by side, then repairs what you tick with the system’s own tools — one password for all of it.</td>
+    <td width="50%" valign="top"><img src="assets/devices.webp" alt="Every device at once — animated demo" width="100%"><br><b>Every device at once</b> — The Devices page lists this computer, external disks, cloud accounts, SSH computers, iPhones and Android phones — then “Large Files everywhere” scans them one after another and groups the results by device.</td>
+    <td width="50%" valign="top"><img src="assets/library.webp" alt="The Library, folder by folder — animated demo" width="100%"><br><b>The Library, folder by folder</b> — Everything in Containers, Group Containers, Caches and the other Library folders, each with its verdict: Apple, an installed app (which one), a developer’s shared folder, a leftover, or unknown. Select Leftovers ticks the sure ones.</td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="assets/contacts-ai.gif" alt="Contacts, tidied by AI — animated demo"><br><b>Contacts, tidied by AI</b> — Long, cluttered contact names become clean names; the extra words go into the note, so nothing is lost.</td>
-    <td width="50%" valign="top"><img src="assets/update.gif" alt="Updating — animated demo"><br><b>Updating</b> — Swep says when a new version is ready; one window downloads, checks the signature, installs — then Restart Now.</td>
+    <td width="50%" valign="top"><img src="assets/multitask.webp" alt="Many things at once — animated demo" width="100%"><br><b>Many things at once</b> — Start a Clean scan, look at Status and Large Files meanwhile, come back: the scan kept going, and every page is exactly as you left it.</td>
+    <td width="50%" valign="top"><img src="assets/repair.webp" alt="System Repair — animated demo" width="100%"><br><b>System Repair</b> — Checks the disk, the sealed system, settings files, apps and services side by side, then repairs what you tick with the system’s own tools — one password for all of it.</td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="assets/owner.gif" alt="Owner Panel — animated demo"><br><b>Owner Panel</b> — In its own window: activation codes, every subscription with its invoices and actions, and the crash reports people send.</td>
-    <td width="50%" valign="top"><img src="assets/cloud.gif" alt="Cloud storage — animated demo"><br><b>Cloud storage</b> — Large files of every kind right on S3-compatible storage, OneDrive or Google Drive: filter to documents or installers, see how full each account is, and reconnect the one that signed out.</td>
+    <td width="50%" valign="top"><img src="assets/cloud.webp" alt="Cloud storage — animated demo" width="100%"><br><b>Cloud storage</b> — Large files of every kind right on S3-compatible storage, OneDrive or Google Drive, then duplicates by the service’s own checksums, and Recheck All Accounts to find the one that signed out.</td>
+    <td width="50%" valign="top"><img src="assets/phones.webp" alt="iPhone and Android — animated demo" width="100%"><br><b>iPhone and Android</b> — Apps on an iPhone with the space each takes, removed over USB; then an Android phone’s preinstalled bloatware, removed (and restorable) the same way.</td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="assets/apps.gif" alt="Homebrew and Android — animated demo"><br><b>Homebrew and Android</b> — Everything Homebrew installed with sizes and updates; then the bloatware on an Android phone, removed over USB (and restorable).</td>
-    <td width="50%" valign="top"><img src="assets/trash-watch.gif" alt="Apps in the Trash — animated demo"><br><b>Apps in the Trash</b> — Drag an app to the Trash and Swep finds the settings and caches it left, at the top of Leftovers.</td>
+    <td width="50%" valign="top"><img src="assets/plugins.webp" alt="Plug-ins, simulators, languages — animated demo" width="100%"><br><b>Plug-ins, simulators, languages</b> — Audio Units, VSTs, Quick Look and other plug-ins with their problems; Xcode’s simulators and device-support files; the languages apps carry that you never use.</td>
+    <td width="50%" valign="top"><img src="assets/duplicates.webp" alt="Pictures that look the same — animated demo" width="100%"><br><b>Pictures that look the same</b> — Beyond byte-for-byte duplicates: resized, re-saved and lightly edited copies of the same picture, grouped, with the largest kept.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/right-click.webp" alt="Right-click everywhere — animated demo" width="100%"><br><b>Right-click everywhere</b> — Rows, groups and pages have their own menus — Show in Finder, Copy path, Analyze this folder, Find here…, Protect, Remove this — with keyboard shortcuts shown.</td>
+    <td width="50%" valign="top"><img src="assets/trash-watch.webp" alt="Leftovers, judged by a local AI — animated demo" width="100%"><br><b>Leftovers, judged by a local AI</b> — Apps you dragged to the Trash sit at the top with what they left behind; Ask Local AI lets the model on your Mac judge every item and tick what it is sure about.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/contacts-ai.webp" alt="Contacts, tidied by AI — animated demo" width="100%"><br><b>Contacts, tidied by AI</b> — Long, cluttered contact names become clean names; the extra words go into the note, so nothing is lost.</td>
+    <td width="50%" valign="top"><img src="assets/update.webp" alt="Updating — animated demo" width="100%"><br><b>Updating</b> — Swep says when a new version is ready; one window downloads, checks the signature, installs — then Restart Now.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="assets/owner.webp" alt="Owner Panel — animated demo" width="100%"><br><b>Owner Panel</b> — In its own window: the computers using Swep (active today, this week, this month), every subscription with the computers it is used on, invoices and actions, and the crash reports people send.</td>
+    <td width="50%" valign="top"><img src="assets/apps.webp" alt="Homebrew and receipts — animated demo" width="100%"><br><b>Homebrew and receipts</b> — Everything Homebrew installed with sizes and updates; the receipts .pkg installers left behind, including those whose app is long gone.</td>
   </tr>
 </table>
 
@@ -92,18 +107,34 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 
 <table>
   <tr>
-    <td width="50%"><a href="assets/clean.webp"><img src="assets/clean.webp" alt="Clean page"></a><br><b>Clean</b> — one scan finds user and system caches, logs, every browser's cache, developer tools, Rust and dependency leftovers, temporary files and the data of apps you removed. Tick what goes; the scan and the clean keep running while you look at other pages.</td>
-    <td width="50%"><a href="assets/history.webp"><img src="assets/history.webp" alt="History page"></a><br><b>History</b> — every clean, when it happened and how much it freed, with the lifetime total. Copy it out as CSV.</td>
+    <td width="50%" valign="top"><a href="assets/clean.webp"><img src="assets/clean.webp" alt="Clean page"></a><br><b>Clean</b> — one scan finds user and system caches, logs, every browser’s cache, developer tools, games and data left by removed apps; nothing goes until you press Clean, and the scan keeps running if you visit other pages.</td>
+    <td width="50%" valign="top"><a href="assets/library.webp"><img src="assets/library.webp" alt="Library page"></a><br><b>Library</b> — every folder in Containers, Group Containers, Caches, Application Support and more, with who it belongs to — remove any of them.</td>
   </tr>
   <tr>
-    <td><a href="assets/settings.webp"><img src="assets/settings.webp" alt="Settings page"></a><br><b>Settings</b> — light, dark or automatic; a Dock icon that follows; Trash or delete for good; sounds and animations; Full Disk Access; Touch ID for sudo; a clean reminder; crash reports and diagnostics in one place.</td>
-    <td><a href="assets/pro.webp"><img src="assets/pro.webp" alt="Swep Pro page"></a><br><b>Swep Pro</b> — ₹20 a month or ₹220 a year, or an activation code. Everything in Swep, on every disk you own.</td>
+    <td width="50%" valign="top"><a href="assets/devices.webp"><img src="assets/devices.webp" alt="Devices page"></a><br><b>Devices</b> — this Mac, external disks, cloud accounts, SSH computers, iPhones and Android phones, each with its own buttons, and three that run everywhere at once.</td>
+    <td width="50%" valign="top"><a href="assets/plugins.webp"><img src="assets/plugins.webp" alt="Plug-ins page"></a><br><b>Plug-ins</b> — audio units, VSTs, Quick Look previews, Spotlight importers, preference panes and fonts, with CPU-slice, signature and developer checks.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="assets/repair.webp"><img src="assets/repair.webp" alt="System Repair page"></a><br><b>System Repair</b> — the startup disk, the sealed system, Gatekeeper, damaged apps and settings files, Spotlight, caches and updates — repaired with the system’s own tools.</td>
+    <td width="50%" valign="top"><a href="assets/cloud.webp"><img src="assets/cloud.webp" alt="Cloud & Servers page"></a><br><b>Cloud & Servers</b> — large files of every kind, empty folders and duplicates right on S3, OneDrive, Google Drive, Dropbox and SFTP computers.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="assets/duplicates.webp"><img src="assets/duplicates.webp" alt="Duplicates page"></a><br><b>Duplicates</b> — identical files by full SHA-256, or pictures that look the same — the largest copy kept.</td>
+    <td width="50%" valign="top"><a href="assets/iphone.webp"><img src="assets/iphone.webp" alt="iPhone & iPad page"></a><br><b>iPhone & iPad</b> — apps with the space each takes, removed over USB; backups and iOS updates kept on this Mac.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="assets/settings.webp"><img src="assets/settings.webp" alt="Settings page"></a><br><b>Settings</b> — show Swep in the Dock, the menu bar, both or neither; keep it running when the window closes; notifications; Finder right-click actions.</td>
+    <td width="50%" valign="top"><a href="assets/pro.webp"><img src="assets/pro.webp" alt="Swep Pro page"></a><br><b>Swep Pro</b> — ₹1,000 a month or ₹6,000 a year on two computers, or an activation code. Everything in Free, plus the whole disk, every app at once and the sp command.</td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="assets/owner-computers.webp"><img src="assets/owner-computers.webp" alt="Owner Panel · Computers page"></a><br><b>Owner Panel · Computers</b> — how many computers use Swep today, this week and this month, by version and system — with the computers each licence is used on.</td>
+    <td width="50%" valign="top"><a href="assets/history.webp"><img src="assets/history.webp" alt="History page"></a><br><b>History</b> — every clean, when it happened and how much it freed, with CSV export.</td>
   </tr>
 </table>
 
 ## Free and Pro
 
-| | Free | Pro (₹20/month · ₹220/year · or an activation code) |
+| | Free | Pro (₹1,000/month · ₹6,000/year · or an activation code · two computers) |
 |---|:---:|:---:|
 | Clean: caches, logs, developer leftovers, app caches, games, temporary files | ✓ | ✓ |
 | Clean: untick individual items before cleaning; system caches | | ✓ |
@@ -122,8 +153,29 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.9
+## What's new in 0.2.10
 
+- Licence: Swep is © 2026 Jagadeesh Kumar S, all rights reserved — not MIT, as the README and the crate metadata used to say. The terms are in LICENSE (shipped with the app, shown under About → Licence with the third-party notices, and in the Windows installer).
+- Releasing: a moment's trouble on Cloudflare's side ("malformed response", a 504 while the Worker's secrets are read during a deploy) no longer stops a release — wrangler is run again up to five times with growing pauses, and the Worker's secrets go up in one bulk call from a private file. A real refusal (bad token, missing permission) still stops with the reason.
+- New: Devices — this computer, external disks, cloud accounts, other computers over SSH (Mac, Windows, Linux, ChromeOS, FreeBSD, Haiku…), iPhones and iPads, and Android phones on one page, each with its own buttons; Large Files, Empty Folders and Duplicates can run on every device at once, grouped by device.
+- New: Computers over SSH — Swep's sp command runs on another computer for Clean, Leftovers, Apps, Empty Folders, Purgeable and Optimize (preview first, then apply); large files and duplicates come through rclone's SFTP.
+- New: iPhone & iPad — storage, every app with the space it and its data take, removal over USB; the backups and iOS updates kept on this Mac.
+- Android Phone: the phone's storage with its largest files and empty folders (deletable), and one click to clear every app's cache.
+- New: Library — every entry of Containers, Group Containers, Caches, Application Support, Preferences and the other Library folders with a verdict (Apple, installed app and which, developer-shared, leftover, unknown) and its size; anything can be removed, with a warning for folders in use.
+- New: Plug-ins — Audio Units, VST, VST3, CLAP and AAX plug-ins, Quick Look previews, Spotlight importers, preference panes, screen savers, input methods, Mail plug-ins and fonts, with CPU-slice, signature and developer checks; broken and orphaned ones ticked.
+- Duplicates: "Similar pictures" finds resized, re-saved and lightly edited copies of the same picture (largest kept); Cloud & Servers finds duplicates on any account by the service's own checksums.
+- AI Clean: sixteen more kinds of tiny junk — empty .localized markers, orphaned Icon files, crash dumps, Office temporary and recovery files, old "copy" files and tiny old downloads, build-tool caches, fresh merge leftovers, IDE folders in plain folders, editor swap files, Zone.Identifier marks, nohup output, Windows shortcuts on a Mac, and sync-conflict copies (shown for review).
+- New: Show Swep in the Dock, the menu bar, both, or in the background only; keep it running when the window closes (closing the last window quits only when Swep is Dock-only and not kept running); a menu bar menu with Clean Now, AI Clean, Free Up Memory and more.
+- New: desktop notifications when a scan or clean finishes while you are elsewhere, when an app you threw away left files behind, and for the clean reminder — clicking one opens Swep on that page. Settings has a toggle and a test.
+- New: right-click in the Finder — Analyze, Find Large Files, Find Duplicates, Find Empty Folders, Uninstall, Remove (Put Back later), Protect and Check File System appear under Quick Actions / Services for folders, apps and disks; files dropped on the Dock icon or opened with Swep get the same choices.
+- New: the Dock icon's right-click menu (Clean Now, AI Clean, Leftovers, Uninstall, Free Up Memory, System Repair, Analyze, More…).
+- New: right-click everywhere inside Swep — rows (Select, Show in Finder, Copy path, Analyze this folder, Find here…, Protect, Why is it here?, Remove this), groups and pages — with keyboard shortcuts shown; tall menus fold into columns.
+- Owner Panel: a Computers page — every computer using Swep (active today, this week, this month; by version and system; CSV export), fed by a once-a-day anonymous ping that Settings can turn off.
+- Licences work on two computers (a desktop and a laptop): activating on the same computer again never uses a new slot; Swep Pro → Deactivate frees the computer so a code or subscription can move; the Owner Panel shows the computers of every code and subscription, frees one, or allows more.
+- Swep Pro is ₹1,000 a month or ₹6,000 a year; subscriptions still on the earlier plans keep working.
+- Every sound now has a small vector picture that draws itself where you clicked (broom, check, radar, trash, star, key, cloud, phone, computer, wrench, shredder, battery, gears, heartbeat, camera, scale, bubbles, page…); off with Animations. Settings → Test Sounds plays eighteen of them.
+- Small windows: a compact layout from 520×380 up — nothing overlaps and only lists scroll; long row texts wrap to two lines instead of being cut.
+- README: sharp animated WebP demos (sixteen clips with descriptions) and 2× screenshots; Install notes for ChromeOS, FreeBSD and computers reached over SSH; a FreeBSD build job in CI.
 - Fixed: after opening Macintosh HD in Analyze, the sidebar stopped working and every page showed "no longer there — removed since the last look". The folder path above the list was catching the sidebar's clicks; it no longer does.
 - Fixed: an action (removing installer receipts, uninstalling, cleaning…) is never undone or lost by changing pages: it finishes, you get a note, and its page shows the new state when you return.
 - Fixed: Homebrew page — works when one package's definition is missing, ignores Homebrew's warnings, finds Homebrew's tools from the Dock, and asks for the password in a normal dialog when an app needs it.
@@ -279,6 +331,11 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Simulators** — every simulated iPhone, iPad, Watch and TV with its size, simulator runtimes, old device-support files, caches, SwiftUI previews, DerivedData — and Android Studio's emulators. Unused ones are ticked.
 - **Language Files** — removes the languages apps carry that are not in Language & Region (English and Base stay), then signs the app again so it still opens; App Store apps, Apple's apps and apps using iCloud or the keychain are left alone.
 - **Kept on purpose** — Leftovers also lists folders that look abandoned but were kept, each with the reason (installed where, running, shared by a developer's other apps, Shortcuts data), so you can remove one anyway.
+- **Devices** — this computer, external disks, cloud accounts, other computers over SSH (Mac, Windows, Linux, ChromeOS, FreeBSD, Haiku…), iPhones and iPads, and Android phones on one page; Large Files, Empty Folders and Duplicates on every device at once. SSH computers run Swep's own `sp` for Clean, Leftovers, Apps and Empty Folders.
+- **iPhone & iPad** — storage and every app with its size, removed over USB; backups and iOS updates kept on this Mac. **Android Phone** — storage (large files, empty folders, all app caches) and bloatware removal.
+- **Library** — every folder in Containers, Group Containers, Caches, Application Support, Preferences and more, each with a verdict and its size; remove anything.
+- **Plug-ins** — audio units, VSTs, Quick Look, Spotlight, preference panes, fonts — with CPU-slice, signature and developer checks.
+- **Show in** Dock / menu bar / both / background; notifications that open Swep; right-click in the Finder, on the Dock icon and everywhere inside Swep.
 - **Homebrew** — every formula and app Homebrew installed, with sizes, what is out of date and what only came along as a dependency; uninstall (apps with their Library data), update, remove old versions and unused dependencies.
 - **Installer Receipts** — every .pkg installer's receipt: still installed, partly removed, or only a receipt of an app long gone; forget receipts, or remove a package with its files (never system files).
 - **Android Phone** — remove the preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones (safe / with care / needed by the phone); removed apps can be restored any time.
@@ -293,6 +350,17 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - Click, Shift-click, drag across rows, or hold Space with the arrow keys to select; filter any list; Trash or delete for good.
 - Light and dark themes from the icon's palette with a readable rainbow for paths, sizes, numbers and brackets (no pink); a Dock icon that follows; sounds and animations for everything (both can be turned off).
 - Closing the window quits completely. Updates are signed and checked before they install.
+
+## Licence
+
+Swep is **© 2026 Jagadeesh Kumar S. All rights reserved.** It is not open source and it is not under the MIT
+licence: the source lives in a private repository, and the apps are free to use under the terms in
+[LICENSE](https://github.com/JKS-sys/swep-releases-30-sep-2026/blob/main/LICENSE) — the Free edition on any number of your computers, Pro with an activation code or
+subscription on two. The full text is also in the app under About → Licence.
+
+The bundled cleaning runtime is a separate GPL-3.0 program; its own licence and notice ship inside `engine.tgz`
+in the app (unpacked to `~/.swep/engine-…/LICENSE` and `NOTICE`) and are shown under About → Licence too. Swep is
+built on the Tauri framework and on open-source Rust and JavaScript libraries, which keep their own licences.
 
 ---
 
