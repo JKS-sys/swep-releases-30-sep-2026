@@ -15,6 +15,8 @@
   <img alt="macOS, Windows, Linux" src="https://img.shields.io/badge/macOS%20%C2%B7%20Windows%20%C2%B7%20Linux-5b45b8?style=flat-square">
 </p>
 
+<p align="center">⭐ <b>If Swep saves you space, please star this repository</b> — it helps other people find it. ⭐</p>
+
 <p align="center">
   <a href="https://ipconfig.co.network/swep">Website</a> ·
   <a href="https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest">Latest release</a> ·
@@ -27,43 +29,49 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.10 (12-oct-2026)
+## Download Swep 0.2.11 (15-oct-2026)
+
+Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.10_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.10_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_x64.dmg) |
-| Windows | [Swep_0.2.10_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_x64-setup.exe) |
-| Linux (AppImage) | [Swep_0.2.10_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_amd64.AppImage) |
-| Linux (Debian/Ubuntu) | [Swep_0.2.10_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/Swep_0.2.10_amd64.deb) |
-| Homebrew cask (no tap needed) | [swep.rb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/swep.rb) |
-| One-line installer | [install.sh](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.10/install.sh) |
+| macOS, Apple Silicon | [Swep_0.2.11_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.11_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_x64.dmg) |
+| Windows (x64) | [Swep_0.2.11_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.11_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.11_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.11_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.11_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.11_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.11/Swep_0.2.11_freebsd_amd64.tar.gz) |
+
+A file missing from the release did not build this time; the website always has the newest of each.
 
 The command-line tool `sp` is inside the macOS app (Swep Pro).
 
 ## Install
 
-**One line (macOS, Apple Silicon or Intel)** — downloads the newest signed release, checks it, and puts Swep in /Applications:
+**With Pour (macOS, Linux, Windows, FreeBSD)** — one line installs Pour, the next installs Swep and keeps it up to date:
+
+```bash
+curl -fsSL https://ipconfig.co.network/pour/install | sh
+pour install --cask swep
+```
+
+On Windows (PowerShell): download [`pour-windows-x86_64.exe`](https://ipconfig.co.network/pour/dl/pour-windows-x86_64.exe), then `pour install --cask swep`.
+
+**One line without Pour (macOS)** — downloads the newest signed release, checks it, and puts Swep in /Applications:
 
 ```bash
 curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 ```
 
-**Homebrew — no tap, no extra repository.** The cask file comes with every release; Homebrew installs it from a local copy:
+**Downloads:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep) or the [latest GitHub release](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest) — `.dmg` for macOS (Apple Silicon and Intel), `_x64-setup.exe` and `_arm64-setup.exe` for Windows, `.deb` (x86_64 and ARM64) and `.AppImage` for Linux, `.tar.gz` for FreeBSD.
 
-```bash
-curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && brew install --cask /tmp/swep.rb
-```
-
-(`brew upgrade --cask /tmp/swep.rb` with a fresh copy updates it; Swep also updates itself from Settings.)
-
-**Downloads:** [ipconfig.co.network/swep](https://ipconfig.co.network/swep) or the [latest GitHub release](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/latest) — `.dmg` for macOS, `_x64-setup.exe` for Windows, `.deb` and `.AppImage` for Linux.
-
-**Linux:** `sudo apt install ./Swep_*_amd64.deb`, or `chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`.
+**Linux:** `sudo apt install ./Swep_*_amd64.deb` (or `_arm64.deb`), or `chmod +x Swep_*_amd64.AppImage && ./Swep_*_amd64.AppImage`.
 **ChromeOS:** turn on Linux (Settings → Advanced → Developers), then install the `.deb` the same way — Swep appears in the launcher under Linux apps.
-**FreeBSD:** `pkg install gtk3 webkit2-gtk_41 libsoup3`, unpack `Swep_*_freebsd_amd64.tar.gz` and run `./swep` (built by a FreeBSD VM in CI; updates by hand from the releases page).
-**Windows:** run `Swep_*_x64-setup.exe`.
-**Haiku and other systems:** reach them from Swep as computers over SSH (Devices → Computers): large files, duplicates and empty folders work on anything with an SSH server.
+**FreeBSD:** `pkg install gtk3 webkit2-gtk_41 libsoup3 librsvg2-rust`, unpack `Swep_*_freebsd_amd64.tar.gz` and run `./swep` (updates by hand from the releases page).
+**Windows:** run `Swep_*_x64-setup.exe` (ARM64 PCs: `_arm64-setup.exe`).
+**Haiku and other systems:** Swep's window needs a WebView that Haiku does not offer to apps like Swep yet; reach such a computer from Swep over SSH (Devices → Computers (SSH)).
 **The sp command** comes inside the app: Settings → Command line → Install sp (Swep Pro).
 
 ## See it move
@@ -99,7 +107,7 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
   </tr>
   <tr>
     <td width="50%" valign="top"><img src="assets/owner.webp" alt="Owner Panel — animated demo" width="100%"><br><b>Owner Panel</b> — In its own window: the computers using Swep (active today, this week, this month), every subscription with the computers it is used on, invoices and actions, and the crash reports people send.</td>
-    <td width="50%" valign="top"><img src="assets/apps.webp" alt="Homebrew and receipts — animated demo" width="100%"><br><b>Homebrew and receipts</b> — Everything Homebrew installed with sizes and updates; the receipts .pkg installers left behind, including those whose app is long gone.</td>
+    <td width="50%" valign="top"><img src="assets/apps.webp" alt="Package managers and receipts — animated demo" width="100%"><br><b>Package managers and receipts</b> — What each package manager installed, with sizes; the receipts .pkg installers left behind, including those whose app is long gone. (Recorded before the Homebrew page became the Pour page.)</td>
   </tr>
 </table>
 
@@ -153,8 +161,22 @@ curl -fsSL https://ipconfig.co.network/updates/swep/swep.rb -o /tmp/swep.rb && b
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.10
+## What's new in 0.2.11
 
+- Accounts: Swep Pro now lives on your account at ipconfig.co.network — one email, wherever you paid (a subscription in Swep, the website shop, an activation or gift code). Sign in with a 6-digit email code or a password (a nav button after About; "Account" once signed in). The licence is Ed25519-signed, bound to this computer's anonymous device id, good offline for 14 days and refreshed every 12 hours; a full plan offers to free another computer right there. The Account page lists the computers holding Pro (rename, free a seat, forget), subscriptions (cancel at the period end or now), codes (gift a spare one), Pro history and sign-ins. Licences from the earlier Swep server keep working until they end and move onto the account at the first sign-in.
+- Owner Panel: rebuilt on the dashboard's owner API — Overview (active computers, Pro users, seats, MRR, codes, crashes, versions, systems, countries), Customers (give or take Pro, computers allowed, sign-in codes, timeline), Licensed Seats, Computers, Activation Codes (redeem-by dates and Pro length in days, extend or re-set many at once, email), Subscriptions (refresh, pause, resume, cancel) and Crash Reports (grouped by signature, fixed ones reopen if they come back). Select All, Delete Selected and Delete All on every tab; Connect to the Dashboard pushes what Swep's Worker holds, and the Worker does it every night. Its own window and its own code chunk.
+- New: the Pour tab (was Homebrew) — every package manager on the computer: Pour, Homebrew, MacPorts, Nix, pkgsrc, Fink, Conda, apt, dnf, pacman, zypper, Snap, Flatpak, FreeBSD pkg, Chocolatey, Scoop, WinGet, npm, pnpm, Yarn, Bun, Deno, Volta, nvm, fnm, pipx, Cargo, Go, rustup, pyenv, rbenv, asdf, mise and SDKMAN. Apps you deleted yourself that a manager still lists (with their command-line tools and cask or receipt folders), command links to nothing, caches, logs, old versions, unused dependencies, the folders of a manager already gone; apps and tools unused for 30 days to two years, removed completely through their own manager; a manager itself removed with its data and the lines it added to your shell files (backed up first).
+- New: Move to Pour — installs every Homebrew tool and app with Pour (apps already in Applications are adopted, not downloaded again), checks each one, and only then, if you ask, removes Homebrew completely.
+- New: Plug-ins is a full audio plug-in uninstaller — every AU, VST, VST3, CLAP, AAX, RTAS and LV2 plug-in in every folder and developer sub-folder, installed with an installer or copied in by hand, grouped across formats with what each brought along (presets, sound content, support folders, settings, what its installer put elsewhere — never a file another plug-in shares). Remove one completely, a whole format, the presets of plug-ins already gone, Audio Unit caches, GarageBand and Logic sound libraries; Final Cut/Motion, Adobe and OBS plug-ins too. On Windows and Linux as well.
+- New: Notifications (macOS) — what Notification Center keeps, per app; clear all or only old notifications, and take removed apps out of System Settings → Notifications.
+- New: Computers with Swep — other computers on your network running Swep appear by themselves; pair once (both screens show the same six digits, Allow on the other one) and they reconnect automatically. Scan and clean them from here with no SSH and no sp; work from a Swep Pro computer runs with Pro there. X25519 pairing, every request encrypted and signed.
+- Language Files: also Chromium/Electron locale packs, Qt translations and gettext folders inside apps, and apps inside folders in Applications.
+- AI Clean: six more kinds — index and trash folders on external disks, Linux trash on external disks, test-coverage reports, stray .pyc files, Jupyter checkpoints, and archives you already unpacked (shown for review); unfinished torrent parts and Emacs/Kate autosaves join their groups.
+- Leftovers: background downloads, recent-document lists, file-provider data and shared caches of removed apps.
+- Eight layouts for every list — list, compact, cards, tiles, board, timeline, magazine, masonry — remembered per page (the Layout button in the bar).
+- Eleven new sounds, each with its own self-drawing picture (a plug being pulled, a glass filling, a badge, a freed seat, two computers shaking hands, a bell going quiet, a waveform, a funnel, a shield, a globe, a folder crossed out); every sound except the tiny interface ticks has a picture, checked before each build. Two more colours (cyan and indigo, no pink) for package managers, plug-in formats and more.
+- Swep installs with Pour everywhere: `pour install --cask swep`; in-app helper installs (rclone, Ollama, the iPhone tools) use Pour too. No Homebrew formula, cask or tap any more; the READMEs ask you to star the repository.
+- Releasing: every installer is built on the Mac — macOS (both chips), Windows x64 and ARM64 (cargo-xwin + NSIS), Linux .deb for x86_64 and ARM64 plus the AppImage (Docker, cross-compiled, in the background), FreeBSD (cross-compiled) — with the caches outside the project, so a fresh unzip rebuilds only Swep. No GitHub CI. Tools come from Pour. Updates go to the new R2 bucket swep-updates-15-oct-2026 (the old one is copied across once and kept).
 - Licence: Swep is © 2026 Jagadeesh Kumar S, all rights reserved — not MIT, as the README and the crate metadata used to say. The terms are in LICENSE (shipped with the app, shown under About → Licence with the third-party notices, and in the Windows installer).
 - Releasing: a moment's trouble on Cloudflare's side ("malformed response", a 504 while the Worker's secrets are read during a deploy) no longer stops a release — wrangler is run again up to five times with growing pauses, and the Worker's secrets go up in one bulk call from a private file. A real refusal (bad token, missing permission) still stops with the reason.
 - New: Devices — this computer, external disks, cloud accounts, other computers over SSH (Mac, Windows, Linux, ChromeOS, FreeBSD, Haiku…), iPhones and iPads, and Android phones on one page, each with its own buttons; Large Files, Empty Folders and Duplicates can run on every device at once, grouped by device.
@@ -321,7 +343,7 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Large Files** (by kind and age), **Installer Files** and **Build Artifacts** (node_modules, Rust target, Python venvs, Pods…).
 - **Purgeable Space** — see how much macOS holds back as purgeable and reclaim it in one click.
 - **Optimize** — DNS, Spotlight, QuickLook, LaunchServices, fonts, Dock and Finder refresh, plus a health and security check.
-- **Developer Leftovers** — Rust caches and old toolchains, folders and broken commands left by removed tools, shell lines that point at them, Homebrew packages nothing needs, Xcode and simulator leftovers, Docker and OrbStack caches, and npm/Yarn/pnpm/Bun/pip/uv/Poetry/Go/CocoaPods/SwiftPM/Gradle/Maven/Conda/NuGet/Bazel caches. Part of every Clean.
+- **Developer Leftovers** — Rust caches and old toolchains, folders and broken commands left by removed tools, shell lines that point at them, Pour and Homebrew packages nothing needs, Xcode and simulator leftovers, Docker and OrbStack caches, and npm/Yarn/pnpm/Bun/pip/uv/Poetry/Go/CocoaPods/SwiftPM/Gradle/Maven/Conda/NuGet/Bazel caches. Part of every Clean.
 - **Privacy traces** — recent-items lists, the download history record and shell histories, never pre-selected.
 - **Protected Folders** — never cleaned, from any page or command.
 - **Duplicates** — identical files by full SHA-256; the oldest copy is kept. **Contacts Fixer** — invalid numbers, repeats, duplicate contacts, empty contacts, country codes; contact photos (see, add, change, remove); AI that shortens long names (the extra words go into the note) and long notes (numbers, addresses and dates kept); in the Contacts app (iCloud, Google, Exchange sync) or a .vcf file; exports a .vcf that iCloud, Google and phones accept.
@@ -334,9 +356,13 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Devices** — this computer, external disks, cloud accounts, other computers over SSH (Mac, Windows, Linux, ChromeOS, FreeBSD, Haiku…), iPhones and iPads, and Android phones on one page; Large Files, Empty Folders and Duplicates on every device at once. SSH computers run Swep's own `sp` for Clean, Leftovers, Apps and Empty Folders.
 - **iPhone & iPad** — storage and every app with its size, removed over USB; backups and iOS updates kept on this Mac. **Android Phone** — storage (large files, empty folders, all app caches) and bloatware removal.
 - **Library** — every folder in Containers, Group Containers, Caches, Application Support, Preferences and more, each with a verdict and its size; remove anything.
-- **Plug-ins** — audio units, VSTs, Quick Look, Spotlight, preference panes, fonts — with CPU-slice, signature and developer checks.
+- **Plug-ins — a full audio plug-in uninstaller** — every AU, VST, VST3, CLAP, AAX, RTAS and LV2 plug-in in every folder and developer sub-folder (installed with an installer or copied in by hand), grouped across formats, with everything it brought along: presets, sound content, support folders, settings and the files its installer put elsewhere — never a file another plug-in shares. Remove a plug-in completely, a whole format your host never uses, the presets of plug-ins already gone, Audio Unit caches and GarageBand/Logic sound libraries; problems (wrong chip, broken signature, half-removed) are ticked. Also Quick Look, Spotlight, preference panes, screen savers, Final Cut/Motion, Adobe and OBS plug-ins, and fonts.
+- **Notifications** (macOS) — what Notification Center keeps, app by app; clear all of an app's notifications or only the old ones, and take removed apps out of System Settings → Notifications.
+- **Computers with Swep** — other computers on your network that run Swep appear by themselves; pair once (both screens show the same six digits, you press Allow on the other one) and they connect automatically from then on. Scan and clean them from here — no SSH, no `sp` — and work started from a Swep Pro computer runs with Pro on the other one. Encrypted and signed end to end.
+- **One account for Pro** — sign in with your email (a 6-digit code, or a password), and Pro follows you to your other computer wherever you paid: a subscription in Swep, the website shop, an activation or gift code. See the computers holding Pro, free a seat, cancel a subscription, gift spare codes.
+- **Eight layouts for every list** — list, compact, cards, tiles, board, timeline, magazine and masonry, remembered per page.
 - **Show in** Dock / menu bar / both / background; notifications that open Swep; right-click in the Finder, on the Dock icon and everywhere inside Swep.
-- **Homebrew** — every formula and app Homebrew installed, with sizes, what is out of date and what only came along as a dependency; uninstall (apps with their Library data), update, remove old versions and unused dependencies.
+- **Pour** — every package manager on the computer: Pour, Homebrew, MacPorts, Nix, pkgsrc, Fink, Conda, apt, dnf, pacman, zypper, Snap, Flatpak, FreeBSD pkg, Chocolatey, Scoop, WinGet, npm, pnpm, Yarn, Bun, Deno, Volta, nvm, fnm, pipx, Cargo, Go, rustup, pyenv, rbenv, asdf, mise and SDKMAN. It finds apps you deleted yourself that a manager still lists (with their command-line tools and cask/receipt folders), command links that point at nothing, caches, logs, old versions and unused dependencies, and the apps and tools you have not used for months — removed completely through their own manager. Remove a whole manager with its data and the lines it added to your shell files (backed up first), and **move everything from Homebrew to Pour** in one go: each tool and app is installed with Pour and checked, and only then is Homebrew removed.
 - **Installer Receipts** — every .pkg installer's receipt: still installed, partly removed, or only a receipt of an app long gone; forget receipts, or remove a package with its files (never system files).
 - **Android Phone** — remove the preinstalled apps (bloatware) on an Android phone over USB, with a guide to the well-known ones (safe / with care / needed by the phone); removed apps can be restored any time.
 - **Apps in the Trash** — drag an app to the Trash and Swep notices the settings, caches and containers it left, and removes them in one click.
@@ -363,5 +389,7 @@ in the app (unpacked to `~/.swep/engine-…/LICENSE` and `NOTICE`) and are shown
 built on the Tauri framework and on open-source Rust and JavaScript libraries, which keep their own licences.
 
 ---
+
+<p align="center">⭐ <b>Found Swep useful? Please star this repository</b> — it is the easiest way to say thanks, and it helps others find it. ⭐</p>
 
 Made by Jagadeesh Kumar S — [ipconfig.co.network/swep](https://ipconfig.co.network/swep) · [NewsCraft Studio](https://www.youtube.com/@JKS-sys)
