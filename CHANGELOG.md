@@ -2,6 +2,41 @@
 
 ## Unreleased
 
+## Swep 0.2.12 — 15-oct-2026
+
+- Fixed: the release stopped silently right after "5 build(s), 2 at a time". The build board looked up a log that was still empty, and under the script's strict mode an empty lookup ended everything without a word. Every lookup on the board now tolerates an empty log, and if anything ever stops update.sh unexpectedly it now prints the line and command where it stopped.
+- Fixed: turning the Dock or menu-bar icon off and on could crash Swep or leave a dead icon behind. The menu-bar icon is now removed by its id and made only when none exists; the change runs on the main thread, any panic in there is caught and written to the log, and coming back to the Dock puts the chosen app icon and the window back.
+- New: the menu-bar icon's left click opens a quick panel — free space as a ring, what Swep has freed, and twelve one-click actions (Clean Now, AI Clean, Free Memory, Leftovers, Large Files, Duplicates, Uninstall, Pour, Plug-ins, Repair, Status, Settings). Double click opens the window; Esc or clicking elsewhere hides the panel.
+- New: a much bigger right-click menu on the menu-bar icon and the Dock icon — free space at the top, Open, Quick Panel, Clean Now, AI Clean, Free Memory, then Clean, Apps and Plug-ins, System, Devices, Appearance (theme, sounds, animations), Swep Lives In (switch between Dock and menu bar right there) and Window and Help (show, hide, compact, large, centre, shortcuts, updates, about, website, star on GitHub, log folder), Settings, Pro, Account and the Owner Panel.
+- New Finder right-click actions: Find Small Junk Here, Remove Unused Languages (on an app), Find Leftovers of This App, and Delete Immediately (skips the Trash, asks first) — twelve in all.
+- Right-click inside Swep: on a row — Open, Quick Look, Get Info, Open a Terminal here, Copy (path, name, folder, size, the row); on a group — copy the group, or remove the whole group; anywhere — Layout, Appearance, Window, Swep Lives In and Settings.
+- Log boxes everywhere: crash reports, search results and command output in dialogs are shown in the same log box (coloured by kind, Copy and Expand).
+- Leftovers: home dot-folders that apps leave behind (~/.vscode, ~/.cursor, ~/.windsurf, ~/.zoomus, ~/.android, ~/.orbstack, ~/.lmstudio, ~/.atom, ~/.zed, ~/.arduino15 and more) once the app is gone, plus folders named after removed apps in ~/.config, ~/.local/share and Sentry's crash cache (the desktop's own folders are never touched).
+- Plug-ins: editor extensions (VS Code, VS Code Insiders, VSCodium, Cursor, Windsurf, Sublime Text) with older copies of updated extensions marked, keyboard layouts and alert sounds.
+- AI Clean: Xcode test results (.xcresult) older than two weeks, crash reports saved as files (.crash, .ips) and TypeScript build records.
+- Language Files: spelling dictionaries inside apps (dictionaries, hunspell; .dic, .aff, .bdic).
+- Five new sounds with their own pictures: the Dock and menu bar switching, Quick Look, Get Info, a background service found among the leftovers, and editor extensions removed.
+- More colour: sidebar headings, every settings row, dialog titles, key lists and menu headings each take their own hue (no pink).
+
+On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
+
+## Swep 0.2.12 — 15-oct-2026
+
+- Fixed: Pour's clean-up failed with "unexpected argument '--prune'". Swep now asks each package manager which options it understands (`pour cleanup --help`) and only passes those, so `pour cleanup`, `pour autoremove`, `pour uninstall` and `pour list` work with Pour as it is today; Homebrew still gets its full options.
+- New log box everywhere (Pour, Clean, System Repair, remote computers): a title bar with a live status (Working · Done · Done, with warnings · problems), counters for steps, finished items, warnings and problems, Copy and a taller view; numbered steps, commands on their own tinted row with a `$` badge, ✓ / ✕ / ! badges, warnings in amber and errors in red, output lines on a quiet rail. The log fills while a command works instead of at the end, and a reason that only says "try --help" is replaced by the real error.
+- Owner Panel stays connected to the dashboard: Swep says hello and pushes its data 20 seconds after start-up and every hour on the owner's Mac, the Worker pushes every hour too, and the Overview shows "Connected · synced 7 min ago" (or the last problem). "Sync Now" is there if you want it sooner — no more pressing Connect.
+- Faster scans: every package manager is looked at side by side, and Homebrew/Pour are asked their seven questions at once; sizes are measured in parallel; AI Clean looks for its four kinds at once and walks each top folder on its own thread; plug-in receipts are read twelve at a time; the list of installed apps is read once for all pages (45 seconds) and its app folders in parallel, without opening Info.plist twice.
+- Leftovers: what removed apps left for every user — background services that still run as administrator (/Library/LaunchDaemons), privileged helpers, login items for all users, and their folders in /Library/Application Support, Caches, Preferences and Logs (one password; a running service is stopped first; everything goes to your Trash). Also crash-reporter data (PLCrashReporter, Crashlytics, Sentry), help indexes and cloud key caches of removed apps. Services that package managers start (brew services, MacPorts, Nix) are never taken for leftovers.
+- AI Clean: Go debugger binaries, old screenshots and screen recordings on the Desktop (for review), KDE .directory files, Java crash reports, Blender/Krita/GIMP automatic backups, and Apple file-server litter on external disks.
+- Language Files: gettext languages anywhere in an app (LibreOffice and other ports), and more folder and file kinds (lang, languages, localization; .json, .ftl, .properties, .strings, .po) — only for real language codes.
+- Plug-ins: Dashboard widgets (gone from macOS since 2019), Automator actions, Quartz Composer plug-ins and compositions, camera and scanner drivers, Reason Rack Extensions, REAPER extensions and JS effects, OpenFX plug-ins (DaVinci Resolve, Nuke, Vegas), Fusion plug-ins, Adobe shared plug-ins, Lightroom Classic and Sketch plug-ins.
+- Eight new sounds, each with its own picture: a terminal when a log finishes, a warning sign when it ends with problems, a dish when the dashboard syncs, a lightning bolt for a quick scan, books for language files, a puzzle piece for plug-ins, leaves for leftovers and a magnet for small junk.
+- More colour: every tab has its own hue, card headings and table headers are coloured, and the log box colours each kind of line.
+- Leaner app: icons are decoded when Swep is built, so the app no longer carries a PNG and colour-management library (the size stays about the same — new features use what that saved).
+- Releasing — FreeBSD builds again: the base system is taken from the newest 14.x on download.freebsd.org (14.3 had moved to the archive, which gave the 404), with the archive as a fallback; tao's FreeBSD gap is patched; LLVM's linker comes from Pour's lld; the sysroot skips compilers, docs and icons (1.3 GB instead of 5.5 GB) and downloads eight packages at a time.
+- Releasing — much faster: macOS (both chips), Windows (both) and FreeBSD build side by side, each with its own cache folder (seeded from the first with an instant APFS copy), as many at once as the memory allows; build scripts and macros compile unoptimised. A live board shows each build's crates, step and time instead of thousands of "Compiling…" lines; full logs are kept in .release/.
+- Releasing: APPS_API_KEY (and LICENCE_PUBLIC, OWNER_SERIALS) are taken from another app's .env beside this one, or asked for once, and kept in .env and the Keychain — so the dashboard and Pour hear about every release.
+
 ## Swep 0.2.11 — 15-oct-2026
 
 - Accounts: Swep Pro now lives on your account at ipconfig.co.network — one email, wherever you paid (a subscription in Swep, the website shop, an activation or gift code). Sign in with a 6-digit email code or a password (a nav button after About; "Account" once signed in). The licence is Ed25519-signed, bound to this computer's anonymous device id, good offline for 14 days and refreshed every 12 hours; a full plan offers to free another computer right there. The Account page lists the computers holding Pro (rename, free a seat, forget), subscriptions (cancel at the period end or now), codes (gift a spare one), Pro history and sign-ins. Licences from the earlier Swep server keep working until they end and move onto the account at the first sign-in.
@@ -164,6 +199,3 @@
 - Fits any window size: headers, toolbars, buttons, cards, dialogs and pictures wrap or shrink instead of running off the edge (checked on every page at the smallest window size).
 - More colour: every page header carries its own coloured icon, groups get their own colour, selected rows and buttons take the page's colour; new sounds for checks, settings resets and pages coming back as you left them.
 - The GitHub README shows animated demos with descriptions: startup, AI Clean, multitasking, System Repair, AI contact tidying, updating and the Owner Panel.
-
-On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
-
