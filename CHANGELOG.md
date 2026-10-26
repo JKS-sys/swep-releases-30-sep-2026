@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## Swep 0.2.15 — 26-oct-2026
+
+- Computers with Swep: work sent from another computer only runs with that computer's Pro when it comes from the owner's Mac; otherwise it runs with Pro only if the computer doing the work has its own Pro.
+- Computers over SSH: the same rule — sp on the remote computer gets Pro from the owner's Mac only, otherwise its own licence.
+- Pour: leaving the tab no longer stops or freezes the scan; coming back joins it or shows its answer, and is never stuck on "Asking every package manager…".
+- Every page: a page you return to that was waiting on nothing any more is drawn fresh instead of showing a stuck wait.
+
+On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
+
 ## Swep 0.2.14 — 26-oct-2026
 
 - Pour → Move to Pour: what is already in Pour is found with the same test the move uses (names, short names, the token Pour resolves), so a finished move is no longer offered again — when everything is in, the page says so and offers only to remove Homebrew. Homebrew's four questions and Pour's list are asked at once.
