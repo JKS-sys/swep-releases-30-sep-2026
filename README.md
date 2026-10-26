@@ -29,20 +29,20 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.15 (26-oct-2026)
+## Download Swep 0.2.16 (26-oct-2026)
 
 Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.15_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.15_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_x64.dmg) |
-| Windows (x64) | [Swep_0.2.15_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_x64-setup.exe) |
-| Windows (ARM64) | [Swep_0.2.15_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_arm64-setup.exe) |
-| Linux (AppImage, x86_64) | [Swep_0.2.15_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_amd64.AppImage) |
-| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.15_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_amd64.deb) |
-| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.15_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_arm64.deb) |
-| FreeBSD (x86_64) | [Swep_0.2.15_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.15/Swep_0.2.15_freebsd_amd64.tar.gz) |
+| macOS, Apple Silicon | [Swep_0.2.16_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.16_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_x64.dmg) |
+| Windows (x64) | [Swep_0.2.16_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.16_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.16_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.16_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.16_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.16_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_freebsd_amd64.tar.gz) |
 
 A file missing from the release did not build this time; the website always has the newest of each.
 
@@ -161,12 +161,14 @@ curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.15
+## What's new in 0.2.16
 
-- Computers with Swep: work sent from another computer only runs with that computer's Pro when it comes from the owner's Mac; otherwise it runs with Pro only if the computer doing the work has its own Pro.
-- Computers over SSH: the same rule — sp on the remote computer gets Pro from the owner's Mac only, otherwise its own licence.
-- Pour: leaving the tab no longer stops or freezes the scan; coming back joins it or shows its answer, and is never stuck on "Asking every package manager…".
-- Every page: a page you return to that was waiting on nothing any more is drawn fresh instead of showing a stuck wait.
+- Pour › Move to Pour: the Homebrew look is done once and kept — switching tabs and coming back shows it at once; Scan Again or a finished move looks again.
+- More leftovers: screen savers, settings panes, colour pickers, input methods, web plug-ins, MIDI drivers and browser helpers (Chromium, Vivaldi, Arc) of removed apps.
+- More plug-ins: Pro Tools AAX (old place), Reason Rack Extensions, REAPER extensions and JSFX, Kontakt, Spitfire, iZotope, FabFilter, Waves, Plugin Alliance, Arturia, UAD, Final Cut Pro, Motion, DaVinci Resolve Fusion, Adobe shared plug-ins, OBS.
+- More cleaning: Zoom logs, WhatsApp, Telegram, Figma and Notion caches, Adobe media cache, DaVinci Resolve caches.
+- More small files: unfinished browser downloads, Office lock files, npm/yarn/Java crash logs.
+- Log boxes: done lines glint green, problems pulse red, steps and warnings get coloured rails, counters pop, soft ticks as steps finish.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
@@ -202,7 +204,7 @@ On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.
 - **Library** — every folder in Containers, Group Containers, Caches, Application Support, Preferences and more, each with a verdict and its size; remove anything.
 - **Plug-ins — a full audio plug-in uninstaller** — every AU, VST, VST3, CLAP, AAX, RTAS and LV2 plug-in in every folder and developer sub-folder (installed with an installer or copied in by hand), grouped across formats, with everything it brought along: presets, sound content, support folders, settings and the files its installer put elsewhere — never a file another plug-in shares. Remove a plug-in completely, a whole format your host never uses, the presets of plug-ins already gone, Audio Unit caches and GarageBand/Logic sound libraries; problems (wrong chip, broken signature, half-removed) are ticked. Also Quick Look, Spotlight, preference panes, screen savers, Final Cut/Motion, Adobe and OBS plug-ins, and fonts.
 - **Notifications** (macOS) — what Notification Center keeps, app by app; clear all of an app's notifications or only the old ones, and take removed apps out of System Settings → Notifications.
-- **Computers with Swep** — other computers on your network that run Swep appear by themselves; pair once (both screens show the same six digits, you press Allow on the other one) and they connect automatically from then on. Scan and clean them from here — no SSH, no `sp` — and work started from a Swep Pro computer runs with Pro on the other one. Encrypted and signed end to end.
+- **Computers with Swep** — other computers on your network that run Swep appear by themselves; pair once (both screens show the same six digits, you press Allow on the other one) and they connect automatically from then on. Scan and clean them from here — no SSH, no `sp` — and work runs with Pro on the other one only if it has its own Pro, or the work comes from the owner's Mac. Encrypted and signed end to end.
 - **One account for Pro** — sign in with your email (a 6-digit code, or a password), and Pro follows you to your other computer wherever you paid: a subscription in Swep, the website shop, an activation or gift code. See the computers holding Pro, free a seat, cancel a subscription, gift spare codes.
 - **A log you can read** — every job (Pour, Clean, System Repair, a remote computer) streams into a log box: a window-style frame that glows in the colour of its state, a progress strip, elapsed time, counts of steps, finished items, warnings and problems, filter chips and search, numbered steps, commands on their own row, errors in red and warnings in amber; follow the end or scroll back, wrap, copy, save it as a text file, make it taller or fold it away.
 - **Fast** — one parallel folder walker for every size (big folders on every core, small ones with no thread start-up), scans on the fast cores, Swep's own `timeout` and `du` for the cleaning runtime (macOS has no `timeout`, which made every bounded step start Perl), app signatures remembered between runs, binary property lists read in-process; package managers, rules, developer leftovers, plug-in receipts and AI Clean's searches run side by side; the list of installed apps is read once for every page; switching tabs never restarts a look.
