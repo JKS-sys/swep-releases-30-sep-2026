@@ -29,20 +29,20 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.16 (26-oct-2026)
+## Download Swep 0.2.17 (05-nov-2026)
 
 Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.16_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.16_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_x64.dmg) |
-| Windows (x64) | [Swep_0.2.16_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_x64-setup.exe) |
-| Windows (ARM64) | [Swep_0.2.16_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_arm64-setup.exe) |
-| Linux (AppImage, x86_64) | [Swep_0.2.16_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_amd64.AppImage) |
-| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.16_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_amd64.deb) |
-| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.16_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_arm64.deb) |
-| FreeBSD (x86_64) | [Swep_0.2.16_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.16/Swep_0.2.16_freebsd_amd64.tar.gz) |
+| macOS, Apple Silicon | [Swep_0.2.17_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.17_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_x64.dmg) |
+| Windows (x64) | [Swep_0.2.17_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.17_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.17_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.17_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.17_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.17_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.17/Swep_0.2.17_freebsd_amd64.tar.gz) |
 
 A file missing from the release did not build this time; the website always has the newest of each.
 
@@ -161,14 +161,21 @@ curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.16
+## What's new in 0.2.17
 
-- Pour › Move to Pour: the Homebrew look is done once and kept — switching tabs and coming back shows it at once; Scan Again or a finished move looks again.
-- More leftovers: screen savers, settings panes, colour pickers, input methods, web plug-ins, MIDI drivers and browser helpers (Chromium, Vivaldi, Arc) of removed apps.
-- More plug-ins: Pro Tools AAX (old place), Reason Rack Extensions, REAPER extensions and JSFX, Kontakt, Spitfire, iZotope, FabFilter, Waves, Plugin Alliance, Arturia, UAD, Final Cut Pro, Motion, DaVinci Resolve Fusion, Adobe shared plug-ins, OBS.
-- More cleaning: Zoom logs, WhatsApp, Telegram, Figma and Notion caches, Adobe media cache, DaVinci Resolve caches.
-- More small files: unfinished browser downloads, Office lock files, npm/yarn/Java crash logs.
-- Log boxes: done lines glint green, problems pulse red, steps and warnings get coloured rails, counters pop, soft ticks as steps finish.
+- iPhone & iPad: "Install iPhone Tools" works — Swep now looks in Pour's folders (/opt/pour/bin) for the tools it just installed; before, the page stayed on "Install iPhone Tools" after a good install.
+- Every tool Pour or Homebrew installed is found when Swep is opened from the Dock (their folders are added to its PATH at start), and Developer cleaning no longer takes a tool Pour installed for uninstalled.
+- update.sh: keys come from the ipconfig dashboard's vault — a new Mac needs nothing typed: the owner's GitHub sign-in (gh) opens it, or it shows a code, you approve it in the owner panel → Vault → Macs, and its own read-only vault token stays in the login keychain. The licence signing key, the update signing key, the "Swep Code Signing" certificate and the owner-device key are kept in the vault the first time and restored from it on another Mac (so licences, updates and Full Disk Access carry over). Without the vault it refuses to make new signing keys by accident (SWEP_NEW_KEYS=1 to do it on purpose).
+- Free plan: cleaning and leftover removal free up to 1 GB a day without Pro; what does not fit waits for tomorrow, with a note. Swep Pro has no limit.
+- Pour › Everything Installed: lists every package — dependencies (marked, never picked as unused), fonts, installers and command-line-only casks, and anything in the Cellar or Caskroom the manager's own list left out.
+- Pour › Move to Pour: the last look is also kept between launches (6 hours) and drawn at once.
+- Worker: records moved from Cloudflare D1 to the ipconfig dashboard's database (swep-03-nov-2026) and key-value namespace (swep-kv-03-nov-2026); update.sh copies what is left and then deletes the old D1 database and Workers KV namespace.
+- More leftovers (kernel and system extensions), more plug-in folders (Soundtoys, Slate Digital, Softube, Antares, Celemony, Toontrack, u-he, Xfer, Output, Eventide, Valhalla, Audio Damage, sonible, Neural DSP, Line 6), more small files (editor swap files, core dumps).
+- Log boxes: a drawn marker per line kind — ring for done, diamond for a step, triangle for a warning, bar for a problem.
+
+- Mac App Store build (Apple silicon): `bash update.sh --appstore` builds, signs and uploads "Swep" with bundle id network.co.ipconfig.swep.store; `--appstore --doctor` names any missing APPLE_STORE_* key, identity or tool (never a value). Never part of the normal release.
+- App Store version: Swep Pro through StoreKit 2 (swep.pro.monthly, swep.pro.yearly) with Subscribe, Restore Purchases and Manage Subscription; each purchase is also recorded on the accounts server.
+- App Store version: no website checkout, activation codes, self-updater, Pour page, account page or download links; it runs in the App Sandbox, and what the sandbox forbids (admin tasks, system folders, removing other apps, other computers, package managers, login items) says so in one line.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
