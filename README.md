@@ -29,20 +29,20 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.18 (05-nov-2026)
+## Download Swep 0.2.19 (06-nov-2026)
 
 Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.18_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.18_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_x64.dmg) |
-| Windows (x64) | [Swep_0.2.18_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_x64-setup.exe) |
-| Windows (ARM64) | [Swep_0.2.18_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_arm64-setup.exe) |
-| Linux (AppImage, x86_64) | [Swep_0.2.18_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_amd64.AppImage) |
-| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.18_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_amd64.deb) |
-| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.18_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_arm64.deb) |
-| FreeBSD (x86_64) | [Swep_0.2.18_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.18/Swep_0.2.18_freebsd_amd64.tar.gz) |
+| macOS, Apple Silicon | [Swep_0.2.19_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.19_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_x64.dmg) |
+| Windows (x64) | [Swep_0.2.19_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.19_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.19_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.19_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.19_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.19_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_freebsd_amd64.tar.gz) |
 
 A file missing from the release did not build this time; the website always has the newest of each.
 
@@ -161,11 +161,9 @@ curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.18
+## What's new in 0.2.19
 
-- Permissions kept across updates: releases are signed only with Developer ID Application (permissions follow the team, on every Mac and certificate renewal) or the one "Swep Code Signing" certificate — never "Apple Development", which the keychain listed in no fixed order, so updates alternated signatures and macOS asked for Full Disk Access and folders again. update.sh now compares each build's signature with the last release's (kept in the vault) and stops on a change; the move to Developer ID is the one planned exception (macOS asks once more, then never).
-- iPhone & iPad: Xcode device support per iOS/watchOS/tvOS/visionOS version, device logs and synced crash reports, app copies iTunes kept, Apple Configurator downloads and the sync caches of macOS's device agents; "Clear Crash Reports on It" takes the crash reports off a plugged-in device.
-- More caches: Swift Package Manager/CocoaPods/Carthage, Bun and Deno, Music/TV/Podcasts/Books, Maps/Weather/News, Discord, Cursor and Windsurf.
+- iPhone Cleaner (iPhone & iPad › Clean the device): a storage ring, battery level and health, app sizes; junk on the phone's own storage (app installers a computer copied over, archives of updated or removed apps, sync downloads, restore and factory leftovers) and folders apps left behind — removed on the phone; large photos and videos copied to Pictures › Swep iPhone Export (then deleted in Photos, so the library stays whole); crash reports cleared; a full backup to this Mac that Finder can restore; Free Memory restarts the phone (iOS has no other way to empty its memory from outside). Uses pymobiledevice3 in Swep's own folder, installed on first use.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
