@@ -29,20 +29,20 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.19 (06-nov-2026)
+## Download Swep 0.2.20 (06-nov-2026)
 
 Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.19_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.19_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_x64.dmg) |
-| Windows (x64) | [Swep_0.2.19_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_x64-setup.exe) |
-| Windows (ARM64) | [Swep_0.2.19_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_arm64-setup.exe) |
-| Linux (AppImage, x86_64) | [Swep_0.2.19_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_amd64.AppImage) |
-| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.19_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_amd64.deb) |
-| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.19_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_arm64.deb) |
-| FreeBSD (x86_64) | [Swep_0.2.19_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.19/Swep_0.2.19_freebsd_amd64.tar.gz) |
+| macOS, Apple Silicon | [Swep_0.2.20_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.20_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_x64.dmg) |
+| Windows (x64) | [Swep_0.2.20_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.20_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.20_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.20_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.20_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.20_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.20/Swep_0.2.20_freebsd_amd64.tar.gz) |
 
 A file missing from the release did not build this time; the website always has the newest of each.
 
@@ -161,9 +161,13 @@ curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.19
+## What's new in 0.2.20
+
+## Swep 0.2.19 — 06-nov-2026
 
 - iPhone Cleaner (iPhone & iPad › Clean the device): a storage ring, battery level and health, app sizes; junk on the phone's own storage (app installers a computer copied over, archives of updated or removed apps, sync downloads, restore and factory leftovers) and folders apps left behind — removed on the phone; large photos and videos copied to Pictures › Swep iPhone Export (then deleted in Photos, so the library stays whole); crash reports cleared; a full backup to this Mac that Finder can restore; Free Memory restarts the phone (iOS has no other way to empty its memory from outside). Uses pymobiledevice3 in Swep's own folder, installed on first use.
+
+On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
