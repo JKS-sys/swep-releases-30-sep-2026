@@ -29,20 +29,20 @@
   <br><sub>The website, <a href="https://ipconfig.co.network/swep">ipconfig.co.network/swep</a>, has every download, the release notes and the Pro plans.</sub>
 </p>
 
-## Download Swep 0.2.21 (07-nov-2026)
+## Download Swep 0.2.22 (07-nov-2026)
 
 Easiest, on every system: install [Pour](https://ipconfig.co.network/pour), then `pour install --cask swep`.
 
 | System | Download |
 |---|---|
-| macOS, Apple Silicon | [Swep_0.2.21_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_aarch64.dmg) |
-| macOS, Intel | [Swep_0.2.21_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_x64.dmg) |
-| Windows (x64) | [Swep_0.2.21_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_x64-setup.exe) |
-| Windows (ARM64) | [Swep_0.2.21_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_arm64-setup.exe) |
-| Linux (AppImage, x86_64) | [Swep_0.2.21_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_amd64.AppImage) |
-| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.21_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_amd64.deb) |
-| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.21_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_arm64.deb) |
-| FreeBSD (x86_64) | [Swep_0.2.21_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.21/Swep_0.2.21_freebsd_amd64.tar.gz) |
+| macOS, Apple Silicon | [Swep_0.2.22_aarch64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_aarch64.dmg) |
+| macOS, Intel | [Swep_0.2.22_x64.dmg](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_x64.dmg) |
+| Windows (x64) | [Swep_0.2.22_x64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_x64-setup.exe) |
+| Windows (ARM64) | [Swep_0.2.22_arm64-setup.exe](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_arm64-setup.exe) |
+| Linux (AppImage, x86_64) | [Swep_0.2.22_amd64.AppImage](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_amd64.AppImage) |
+| Linux (Debian/Ubuntu, x86_64) | [Swep_0.2.22_amd64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_amd64.deb) |
+| Linux (Debian/Ubuntu, ARM64) | [Swep_0.2.22_arm64.deb](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_arm64.deb) |
+| FreeBSD (x86_64) | [Swep_0.2.22_freebsd_amd64.tar.gz](https://github.com/JKS-sys/swep-releases-30-sep-2026/releases/download/v0.2.22/Swep_0.2.22_freebsd_amd64.tar.gz) |
 
 A file missing from the release did not build this time; the website always has the newest of each.
 
@@ -161,15 +161,13 @@ curl -fsSL https://ipconfig.co.network/updates/swep/install.sh | bash
 | Overview, Purgeable Space, Free Up Memory, Status (battery and SSD health), History, Protected Folders, Touch ID for sudo | ✓ | ✓ |
 | The `sp` command line (previews are free; making changes is Pro) | | ✓ |
 
-## What's new in 0.2.21
+## What's new in 0.2.22
 
-- App Store version: the sidebar, Overview, menu-bar panel, Dock and app menus show only what the sandbox allows — no Uninstall, System Repair, Purgeable Space, Optimize, Processes/Free Memory, Startup Items, Android, Cloud & Servers, Devices, Installer Receipts, Language Files, Package Caches, Pour or other computers; Clean has no system-caches option; iPhone & iPad shows only what iPhones left on this Mac; Swep Pro lists only what Pro adds there.
-- App Store Connect listing written field by field (docs/APPSTORE-LISTING.md).
-- Log boxes: links, durations (1.2s, 350ms) and version numbers get their own colours beside paths, sizes, numbers, quotes and brackets; a live sparkline of how fast lines arrive with a lines-per-second rate, and a starting sound with its own drawn scene (logStart, pulse).
-- Results: space freed lands with a new burst scene and a rising chime (freed, burst); the result number ticks when its count-up lands (tally, tally).
-- Empty states drawn in several colours; buttons give a little when pressed (respects Animations Off and reduced motion).
-- scripts/nopink.mjs: fails on any colour in the front end with a hue of 280–350°.
-- update.sh: the Developer ID certificate, the notarisation login and the App Store Connect key come from the vault too (shared APPLE_DEVID_P12, APPLE_* and APPLE_API_KEY_P8) — a new Mac signs and notarises as the same developer with nothing set up by hand.
+- Contacts › merge duplicates keeps everything: the card shows the fullest name and every other name becomes a nickname (search still finds it); every number, email, address, website and profile stays — also the same number written another way or under another label — only exact copies are left out; the note starts "Merged from N cards on … Also known as: …" and lists each card with everything it had (a second company or birthday is kept there); a merged note is never shortened. The Contacts app gets the same (addresses, websites, profiles, nicknames, note), not only numbers and emails.
+- Contacts: an empty number is no longer listed, checked or merged.
+- Contacts › Missing country code: each number gets its own country — a number written with 00, a code written without +, the country of another number on the card, the card's address, its email's country domain — and the home country only when nothing else says otherwise.
+- Contacts: the account and the tab (Contacts or Fix Problems) come back after another page and after a restart.
+- Choose the AI Swep asks (Settings and AI Models): Automatic, Swep AI, or any Ollama or LM Studio model on this Mac; a chosen model that is not running says so instead of quietly asking another.
 
 On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
 
