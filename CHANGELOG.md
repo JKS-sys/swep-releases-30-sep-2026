@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## Swep 0.2.25 — 24-nov-2026
+
+- Contacts fixer: Pause, Resume and Stop while fixing. Each takes effect between fixes, never in the middle of one, so a merge is never left half made. Online accounts are written with every save before any delete, so stopping can leave a duplicate behind but never removes a contact whose details were not copied yet. A .vcf file is written to a new file and then renamed over the old one. A backup of every contact is still saved before anything changes.
+- Mac App Store edition (App Review 5.6): it is now its own build instead of the website build with pages hidden. Its binary and pages leave out at compile time: the website account and payments, activation codes, the owner unlock and Owner Panel, the updater, admin work, other computers, devices, Pour, Duplicate Apps, Shared Folder and iPhone & iPad. Its menus, Settings and About no longer show the Owner Panel, Full Disk Access, the website, GitHub or the hiring box. It has its own licence text (Apple's standard EULA) and its own release notes, and the sp helper inside it is built without the owner unlock. scripts/store-check.mjs proves the pages and the signed app carry none of it (appstore.sh runs it before signing), and scripts/store-smoke.mjs opens every App Store page as App Review would. The minimum macOS for the App Store build is now 13.
+
+On macOS, if the app is reported as damaged, run: `xattr -cr /Applications/Swep.app`
+
 ## Swep 0.2.24 — 17-nov-2026
 
 - Duplicate Apps: finds apps that are on the Mac more than once (same bundle id) in Applications, ~/Applications, Downloads, Desktop, Documents and /Users/Shared. The copy in Applications always stays (a plain name before "App 2" or "App copy", then the newest version); with none in Applications, the newest copy stays. The rest go to the Trash.
